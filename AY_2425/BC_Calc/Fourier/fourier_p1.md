@@ -1,32 +1,38 @@
 ---
 marp: true
-html: true
----
-# What is sound?
-
-[watch this video](https://www.youtube.com/embed/6JeyiM0YNo4?si=iBHws45iXrHiIzNL)
-
+theme: default
 ---
 
+| Group 1 | Group 2 | Group 3 | Group 4| Group 5 | Group 6 |
+|---|---|---|---|---|---|
+| p11 | p12 | p13 | p14 | p15 | p16 |
+| p21 | p12 | p13 | p14 | p15 | p16 |
+| p31 | p12 | p13 | p14 | p15 | p16 |
+| p41 | p12 | p13 | p14 | p15 | p16 |
 
+# Announcements
+- Check 22 retakes by this Wednesday at 3:35pm
+- Check 23 retakes by this Friday at 3:35pm
 
-# Activity
+<!--Bell Ringer Choose a Random Sentence -->
 
-1. Create a script using https://randomwordgenerator.com/sentence.php
+---
 
+# Spectrograms
 
-2. Two students to read sentences into your computer mic while [this oscilloscope](https://oscilloscope.sciencemusic.org/) is running
-
-3. The same two students will read the same sentences while the [spectrogram](https://spectrogram.sciencemusic.org/) app runs
-
+ [Spectrogram Website](https://spectrogram.sciencemusic.org/)
+<!-- for each group a representative reads the sentence into the spectrogram -->
+<!-- you play cello -->
+<!-- students discuss what is being depicted in the spectrogram -->
 
 
 ---
 # Discuss
-What are we looking at here?
+ * What is going here?
+ * What is sound?
 
-![dolpin_spec](./images/Dolphin1.jpg)
-Spectrogram of dolphin vocalizations; chirps, clicks and harmonizing are visible as inverted Vs, vertical lines and horizontal striations respectively.
+![bg right](./images/Dolphin1.jpg)
+
 
 ---
 # What is Sound?
@@ -36,19 +42,22 @@ Spectrogram of dolphin vocalizations; chirps, clicks and harmonizing are visible
 <figcaption> Cochlea (left), Organ of Corti (right) . CC license from wikipedia </figcaption>
 </figure>
 
-<!--![anatomy](./images/Anatomy_of_the_Human_Ear.svg){width=400}
-![corti](./images/Organ_of_corti.svg)-->
+
+[watch this video](https://www.youtube.com/embed/6JeyiM0YNo4?si=iBHws45iXrHiIzNL)
 
 
 ---
 # Fourier Analysis
 
+Any (piecewise) continuous function can be approximated as a Fourier series
+
 $$
-s(t) = \underbrace{\sum_{k=0}^{\infty} c_k \cos(kt)}_{\text{even}} + \underbrace{\sum_{k \geq 1}s_k \sin(kt)}_{\text{odd}}
+s(t) = \underbrace{\sum_{k=0}^{\infty} c_k \cos(kt)}_{\text{even}} + \underbrace{\sum_{k=1}^\infty s_k \sin(kt)}_{\text{odd}}
 $$
 
 ---
-# Fourier Analysis
+# Fourier Transform
+Given a function, $s(t)$, we can compute the Fourier coefficents via the Fourier transform
 
 $$
 \begin{align}
@@ -59,6 +68,36 @@ s_k &= \frac{1}{\pi} \int_{-\pi}^\pi s(\tau) \sin(k\tau) d\tau
 $$
 
 ---
-# Live Example
+# Example
 
+Consider the function
+$$
+f(x) = \begin{cases}
+    1 & \text{for } 0 < x < \pi \\
+    -0.5 & \text{for } -\pi < x \leq 0
+\end{cases}
+$$
 
+Let's compute a 6th order Fourier Approximation
+
+[Desmos link](https://www.desmos.com/calculator/oxqby80vki)
+<!-- group k computes the kth Fourier coefficients-->
+
+---
+
+## Power Spectrum
+
+The power spectrum of a signal, $f(t)$, is the function
+
+$$
+P[k] = c_k^2 + s_k^2
+$$
+
+where $c_k, s_k$ are the Fourier coefficients of $f$.
+
+---
+
+## Discuss
+- [What is going on here?](https://spectrogram.sciencemusic.org)
+- What is sound?
+![bg right](./images/Dolphin1.jpg)
