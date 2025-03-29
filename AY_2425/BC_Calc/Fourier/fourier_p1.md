@@ -11,8 +11,9 @@ theme: default
 | p41 | p12 | p13 | p14 | p15 | p16 |
 
 # Announcements
-- Check 22 retakes by this Wednesday at 3:35pm
+- Check 22 retakes by this Thursday at 3:35pm
 - Check 23 retakes by this Friday at 3:35pm
+- Homework problems can be found at the end of today's notes. Due Friday
 
 <!--Bell Ringer Choose a Random Sentence -->
 
