@@ -5,10 +5,10 @@ theme: default
 
 | Group 1 | Group 2 | Group 3 | Group 4| Group 5 | Group 6 |
 |---|---|---|---|---|---|
-| p11 | p12 | p13 | p14 | p15 | p16 |
-| p21 | p12 | p13 | p14 | p15 | p16 |
-| p31 | p12 | p13 | p14 | p15 | p16 |
-| p41 | p12 | p13 | p14 | p15 | p16 |
+| Finch | Oliver P. | Prady | Marin | Walker | Irys |
+| Dennis | Kai | Ethan | Izzy | Nat | Kari |
+| Zander | AJ | Elijah | Sylvia | Tristan | Finley |
+| Luka | Jack | Rachel | RJ | Louis | Rachel |
 
 # Announcements
 - Check 22 retakes by this Thursday at 3:35pm
