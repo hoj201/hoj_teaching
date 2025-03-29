@@ -44,7 +44,6 @@ theme: default
 </figure>
 
 
-[watch this video](https://www.youtube.com/embed/6JeyiM0YNo4?si=iBHws45iXrHiIzNL)
 
 
 ---

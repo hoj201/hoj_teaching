@@ -33,7 +33,11 @@ We would like to understand the striation patterns
 
 # Modelling a violin string
 
-Let's model the deviation of the string as a function of space and time, $h(x,t)$.
+Let's model the deviation of the string as a function of space and time, $h(x,t)$ with the boundary condition:
+
+$$
+h(-\pi,t) = h(\pi,t) = 0
+$$
 
 ![bg right](images/violin-strings.jpg)
 
@@ -44,7 +48,7 @@ Let's model the deviation of the string as a function of space and time, $h(x,t)
 # The wave equation
 
 $$
-\frac{\partial^2 h}{\partial t^2} = \kappa \frac{\partial^2 h}{\partial x^2}
+\frac{\partial^2 h}{\partial t^2} =  \kappa \frac{\partial^2 h}{\partial x^2}
 $$
 
 ![bg right](images/hokusai.jpg)
@@ -69,7 +73,7 @@ Can we choose $s(t)$ so that $h(x,t)$ satisfies the wave equation?
 
 # Answer (yes)
 
-$h(x,t)$ satisfies the wave equation if (and only if)
+$h(x,t) = s(t) \sin(nx)$ satisfies the wave equation if (and only if)
 
 $$
     \frac{d^2 s}{dt^2} = -\kappa n^2 s
@@ -84,19 +88,16 @@ Can we solve it?
 ---
 
 # Solution
-If
+
 $$
-s(t) = A \cos(n\sqrt{\kappa} \cdot t) + B \sin(n \sqrt{\kappa} \cdot t)
-$$
-then 
-$$
-h(x,t) = s(t) \sin(nx)
+h(x,t) = \left( A \sin( n \sqrt{\kappa} \cdot  t) + B \cos(n \sqrt{\kappa} \cdot t) \right) \cdot \sin(nx)  
 $$
 satisfies the wave equation
 
 $$
-\frac{\partial^2 h}{\partial t^2} = \kappa \frac{\partial^2 h}{\partial x^2}
+\frac{\partial^2 h}{\partial t^2} =  \frac{\partial^2 h}{\partial x^2}
 $$
+and the boundary condition $h(-\pi,t) = h(\pi,t) = 0$.
 
 <!-- You should have 15-20 minutes left -->
 
@@ -106,28 +107,23 @@ $$
 If we have two such solutions
 $$
 \begin{align}
-    h_n(x,t) &= s_n(t) \sin(nx) \\
-    h_m(x,t) &= s_m(t) \sin(mx)
+    h_1(x,t) &= (A \sin(n \sqrt{\kappa} \cdot t) + B \cos(n \sqrt{\kappa} \cdot t)) \sin(nx) \\
+    h_2(x,t) &= (C \sin(m \sqrt{\kappa} \cdot t) + D \cos(m \sqrt{\kappa} \cdot t)) \sin(m x)
 \end{align}
 
 $$
-Then does
+Then is
 $$
-    h(x,t) = h_n(x,t) + h_m(x,t)
+    h(x,t) = h_1(x,t) + h_2(x,t)
 $$
-satisfy the wave equation?
+also a solution?
 
 
 ---
 # General solution of the wave equation
 
 $$
-    h(x,t) = \sum_{k=1}^{\infty} s_n(t) \sin(nx)
-$$
-where
-$$
-    s_n(t) = A_n \cos(n\sqrt{\kappa} \cdot t) + B_n \sin(n \sqrt{\kappa} \cdot t)
-t
+    h(x,t) = \sum_{k=1}^{\infty} (A_n \sin(n \sqrt{\kappa} \cdot t) + B_n \cos(n \sqrt{\kappa} \cdot t)) \sin(nx)
 $$
 
 <!-- note how the only oscillations we see in time are integers multiples of root(kappa)-->
