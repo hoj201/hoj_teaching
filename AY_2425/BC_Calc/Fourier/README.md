@@ -67,4 +67,3 @@ Students see how a general solution is a sum of these
 Fourier solutions
 
 ### Striations revisited
-
