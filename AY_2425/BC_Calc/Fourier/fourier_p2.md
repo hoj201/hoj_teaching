@@ -2,23 +2,6 @@
 marp: true
 ---
 
-# Announcements
-- The Juniors are my favorite students.
-- Check 23 retake due today at 3:35pm
-
-# Bell-ringer (5 minutes)
-
-
-Imagine an elastic string that is pinned at both ends on the interval $[-\pi, \pi]$.  The deviation of the string from a straight line can be modelled with a function $h(x)$.  Let's
-say $h(x) = \sin(kx)$.
-
-- What can $k$ be?
-- What can't $k$ be? Why?
-
-<!-- have the students figure this out for themselves-->
-
----
-
 # Goal
 
 On the left is a spectrogram of a violin
