@@ -36,7 +36,7 @@ adjectives = [
 adjectives.sort()
 
 names = [
-    "Liam", "Olivia", "Noah", "Emma", "Oliver", "Ava", "Elijah", "Sophia", "James", "Isabella",
+    "Liam", "Ava", "Soraya", "Ronan", "Hadley", "Jack", "Elijah", "Sophia", "James", "Isabella",
     "William", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn",
     "Daniel", "Abigail", "Matthew", "Ella", "Sebastian", "Scarlett", "Jack", "Luna", "Owen", "Chloe"
 ]

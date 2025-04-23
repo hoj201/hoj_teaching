@@ -22,3 +22,12 @@ Run the python script
 make handout.pdf
 ```
 You can then open `handout.pdf`.  To clean up run `make clean`.
+
+## Todo
+ - [ ] use exactly one line with a y-intercept for each match
+ - [ ] Create one-note with instructions
+ - [ ] 2 problems that are verbal/graph
+ - [ ] 2 problems that are table/graph
+ - [ ] 2 problems that are function/graph
+ - [ ] 2 problems that are table/function
+ - [ ] print on colored paper
