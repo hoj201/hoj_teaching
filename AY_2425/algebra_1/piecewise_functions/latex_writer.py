@@ -7,21 +7,24 @@ class LatexWriter:
     def write(self, text: str) -> None:
         self.file.write(text + '\n')
 
-    def environment(self, name: str, options: str = '') -> 'LatexEnvironment':
-        return LatexEnvironment(self.file, name, options)
+    def environment(self, name: str, options: str = '', required: str = '') -> 'LatexEnvironment':
+        return LatexEnvironment(self.file, name, options, required)
 
 
 class LatexEnvironment:
-    def __init__(self, file: TextIO, name: str, options: str = '') -> None:
+    def __init__(self, file: TextIO, name: str, options: str = '', required: str = '') -> None:
         self.file = file
         self.name = name
         self.options = options
+        self.required = required
 
     def __enter__(self) -> None:
+        begin_str = f"\\begin{{{self.name}}}"
         if self.options:
-            self.file.write(f"\\begin{{{self.name}}}[{self.options}]\n")
-        else:
-            self.file.write(f"\\begin{{{self.name}}}\n")
+            begin_str += f"[{self.options}]\n"
+        if self.required:
+            begin_str += f"{{{self.required}}}"
+        self.file.write(begin_str + "\n")
 
     def __exit__(self,
                  exc_type: Optional[type],

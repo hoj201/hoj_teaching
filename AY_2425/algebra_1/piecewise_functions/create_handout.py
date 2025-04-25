@@ -29,7 +29,7 @@ divider_text = r"""\vspace{2in}
 """
 
 adjectives = [
-    "grimy", "dazzling", "brittle", "sneaky", "lush", "brash", "mellow", "eerie", "quaint", "fierce",
+    "grimy", "dazzling", "sneaky", "lush", "brash", "mellow", "eerie", "quaint", "fierce",
     "foggy", "vibrant", "hollow", "silky", "zesty", "jagged", "nimble", "wistful", "clumsy", "radiant",
     "shabby", "bumpy", "moody", "plush", "rustic", "timid", "quirky", "gaudy", "mellow", "spiky"
 ]
@@ -37,60 +37,138 @@ adjectives.sort()
 
 names = [
     "Liam", "Ava", "Soraya", "Ronan", "Hadley", "Jack", "Elijah", "Sophia", "James", "Isabella",
-    "William", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Henry", "Harper", "Alexander", "Evelyn",
+    "William", "Mia", "Benjamin", "Charlotte", "Lucas", "Amelia", "Harper", "Alexander", "Evelyn",
     "Daniel", "Abigail", "Matthew", "Ella", "Sebastian", "Scarlett", "Jack", "Luna", "Owen", "Chloe"
 ]
 
 
 
 class Match(object):
-    def __init__(self, pf: PiecewiseFunction, word1: str, word2: str):
+    def __init__(self, pf: PiecewiseFunction, word1: str, word2: str, match_type: str):
         self.pf = pf
         self.word1 = word1
         self.word2 = word2
+        self.match_type = match_type
 
-    def tex(self):
+    def to_latex(self):
+        if self.match_type == "f2g":
+            return self.function2graph_tex()
+        if self.match_type == "f2t":
+            return self.function2table_tex()
+        if self.match_type == "f2d":
+            return self.function2description_tex()
+        if self.match_type == "g2t":
+            return self.graph2table_tex()
+        if self.match_type == "g2d":
+            return self.graph2description_tex()
+        if self.match_type == "t2d":
+            return self.table2description()
+        raise ValueError(f"unrecognized match_type {self.match_type}")
+        
+
+    def _match_tex(self, tex1: str, tex2: str):
         with io.StringIO() as buffer:
             writer = LatexWriter(buffer)
-            writer.write(self.pf.tex())
+            writer.write(tex1)
             writer.write(self.word1)
             writer.write(divider_text)
-            writer.write(self.pf.pgfplot())
-            writer.write(r"\vspace{2ex}")
+            writer.write(tex2)
+            writer.write("\n" + r"\vspace{2ex}")
             writer.write(self.word2)
             buffer.seek(0)
             return buffer.read()
+        
+    def function2graph_tex(self):
+        return self._match_tex(self.pf.to_latex(), self.pf.pgfplot())
+        
+    def function2table_tex(self):
+        return self._match_tex(self.pf.to_latex(), self.pf.table_tex())
 
-class Handouts(object):
-    def __init__(self, matches: List[Match]):
-        self.matches = matches
+    def function2description_tex(self):
+        return self._match_tex(self.pf.to_latex(), self.pf.description)
 
-    def tex(self):
-        with io.StringIO() as buffer:
-            writer = LatexWriter(buffer)
-            writer.write(preamble)
-            # Write the riddles
-            with writer.environment("document"):
-                for match in self.matches:
-                    writer.write(match.tex())
-                    writer.write(r"\pagebreak")
-                
-                # write the answer key
-                with writer.environment("center"):
-                    writer.write(r"\Large Answer Key")
-                for match in self.matches:
-                    with writer.environment("itemize"):
-                        writer.write(r"\item " + match.word1 + " : " + match.word2)
-            buffer.seek(0)
-            return buffer.read()
+    def graph2description_tex(self):
+        return self._match_tex(self.pf.pgfplot(), self.pf.description)
 
-if __name__ == "__main__":
+    def graph2table_tex(self):
+        return self._match_tex(self.pf.pgfplot(), self.pf.table_tex())
+
+    def table2description(self):
+        return self._match_tex(self.pf.description, self.pf.table_tex())
+        
+
+def create_match_game_latex(buffer):
     x = Polynomial({1:1})
     one = Polynomial({0:1})
-    pf_list = [
-        PiecewiseFunction([Interval(-4,-1,True, True), Interval(-1,4, False, True)], [2*x-one, 2*x]),
-        PiecewiseFunction([Interval(-10,-2,True,False), Interval(-2,0, True,True), Interval(0,10,False,True)], [2*one, -x, -2*one])
+    pfs = [
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-1)"), Interval.from_string("[-1,1]"), Interval.from_string("(1,inf)")],
+            functions=[one, x+2*one, 3*one],
+            description="graph holds constant at 1 until x=-1, then rises until it hits 3 at x=1, then stays constant at 3"
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-2)"), Interval.from_string("[-2,1]"), Interval.from_string("(1,inf)")],
+            functions=[one, 2*one, 4*one],
+            description="graph is constant at a value of 1 until x=-2, where it jumps up by one, and holds constant, then jumps up by two at x=1, and is constant forever after."
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-2)"), Interval.from_string("[-2,1]"), Interval.from_string("(1,inf)")],
+            functions=[one, x, one],
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,1)"), Interval.from_string("[1,inf)")],
+            functions=[x+1, -1*one],
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,1)"), Interval.from_string("[1,inf)")],
+            functions=[x-1, one],
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-2)"), Interval.from_string("[-2,1]"), Interval.from_string("(1,inf)")],
+            functions=[one, -x, one],
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-1)"), Interval.from_string("[-1,1]"), Interval.from_string("(1,inf)")],
+            functions=[-one, x, one],
+        ),
+        PiecewiseFunction(
+            domains=[Interval.from_string("(-inf,-2)"), Interval.from_string("[-2,2]"), Interval.from_string("(2,inf)")],
+            functions=[-one, x, one],
+        )
     ]
-    matches = [Match(pf_list[k], adjectives[k], names[k]) for k in range(len(pf_list))]
-    handouts = Handouts(matches)
-    print(handouts.tex())
+
+    match_types = [
+        "g2d",
+        "g2d",
+        "g2t",
+        "g2t",
+        "f2g",
+        "f2g",
+        "f2t",
+        "f2t"
+    ]
+
+    matches = [
+        Match(pf, w1, w2, match_type=mt) for pf, w1, w2, mt in zip(pfs, adjectives, names, match_types)
+    ]
+    writer = LatexWriter(buffer)
+    writer.write(preamble)
+    # Write the riddles
+    with writer.environment("document"):
+        for match in matches:
+            writer.write(match.to_latex())
+            writer.write(r"\pagebreak")
+        
+        # write the answer key
+        with writer.environment("center"):
+            writer.write(r"\Large Answer Key")
+        with writer.environment("itemize"):
+            for match in matches:
+                writer.write(r"\item " + match.word1 + " : " + match.word2)
+
+if __name__ == "__main__":
+    with io.StringIO() as buffer:
+        create_match_game_latex(buffer)
+        buffer.seek(0)
+        print(buffer.read())
+    

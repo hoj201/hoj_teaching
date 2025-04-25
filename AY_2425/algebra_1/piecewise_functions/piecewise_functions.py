@@ -1,43 +1,18 @@
+import re
 from typing import List, LiteralString, NamedTuple, Union, Dict
 from latex_writer import LatexWriter
 from io import StringIO
 from abc import ABC, abstractmethod
 from copy import deepcopy
 
+from intervals import Interval
+
 Numeric = Union[float, int]
 
-class Interval(NamedTuple):
-    start: int
-    end: int
-    left: bool
-    right: bool
-
-    def __lt__(self, other):
-        return self.start < other.start
-
-    def tex(self):
-        tex = f"{self.start}"
-        if self.left:
-            tex += " \\leq x "
-        else:
-            tex += " < x "
-        if self.right:
-            tex += f"\\leq {self.end}"
-        else:
-            tex += f"< {self.end}"
-        return tex
-    
-    def __contains__(self, x: Numeric):
-        if self.left and x==self.begin:
-            return True
-        if self.right and x==self.end:
-            return True
-        return x < self.end and x > self.begin
-    
 class Function(ABC):
 
     @abstractmethod
-    def tex(self) -> LiteralString:
+    def to_latex(self) -> LiteralString:
         pass
 
     @abstractmethod
@@ -54,7 +29,7 @@ class Polynomial(Function):
     def eval(self, x: Numeric):
         return sum([coef*x**pow for pow, coef in self.coefficients.items()])
     
-    def tex(self):
+    def to_latex(self):
         def monomial_tex(power, coef):
             if power==0:
                 return str(coef)
@@ -80,6 +55,8 @@ class Polynomial(Function):
         return s.replace("+-", "-")
 
     def __add__(self, other):
+        if isinstance(other, int):
+            return self.__add__(Polynomial({0:other}))
         coefficients = deepcopy(self.coefficients)
         for p in other.powers:
             if p not in self.powers:
@@ -105,6 +82,8 @@ class Polynomial(Function):
         return Polynomial({k:-v for k,v in self.coefficients.items()})
 
     def __sub__(self, other):
+        if isinstance(other, int):
+            return self.__add__(Polynomial({0:other}))
         return self.__add__(other.__neg__())
     
     def __isub__(self, other):
@@ -123,7 +102,7 @@ class Polynomial(Function):
 
 
 class PiecewiseFunction(Function):
-    def __init__(self, domains: List[Interval], functions: List[Function]):
+    def __init__(self, domains: List[Interval], functions: List[Function], description=None):
         self.functions = functions
         self.domains = domains
         xmin = min([d.start for d in domains])
@@ -131,13 +110,14 @@ class PiecewiseFunction(Function):
         self.axis_options = r"""axis lines = middle,
             xlabel = $x$, ylabel = $f(x)$,
             domain=-4:4,
-            samples=200,
+            samples=20,
             ymin=-4.5, ymax=4.5,
             xmin=-4.5, xmax=4.5,
             grid=both,
             xtick={-4,-3,-2,-1,1,2,3,4},
             ytick={-4,-3,-2,-1,1,2,3,4},
             enlargelimits=true"""
+        self.description = description
 
     def eval(self, x):
         for d, f in zip(self.domains, self.functions):
@@ -145,7 +125,7 @@ class PiecewiseFunction(Function):
                 return f.eval(x)
         raise RuntimeError("Domain error")
 
-    def tex(self):
+    def to_latex(self):
         with StringIO() as buffer:
             writer = LatexWriter(buffer)
             with writer.environment("align*"):
@@ -153,7 +133,7 @@ class PiecewiseFunction(Function):
                 with writer.environment("cases"):
                     writer.write(
                         " \\\\ \n".join(
-                            [f.tex() + r" & \text{ if } " + d.tex() for f,d in zip(self.functions, self.domains)]
+                            [f.to_latex() + r" & \text{ if } " + d.to_latex() for f,d in zip(self.functions, self.domains)]
                         )
                     )
             buffer.seek(0)
@@ -166,18 +146,18 @@ class PiecewiseFunction(Function):
             with writer.environment("tikzpicture"):
                 with writer.environment("axis", options=self.axis_options):
                         for f,d in zip(self.functions, self.domains):
-                            s = "\\addplot[domain={:0}:{:1}]".format(d.start, d.end)
+                            s = "\\addplot[domain={:0}:{:1}]".format(max(-5,d.start), min(d.end,5))
                             s += "{" + f.pgf() + "};"
                             writer.write(s)
                         writer.write("% Open circles at discontinuities")
                         for f,d in zip(self.functions, self.domains):
-                            if d.left:
+                            if d.inclusive_start:
                                 s = "\\addplot[only marks, mark=*, fill=black] coordinates"
                             else:
                                 s = "\\addplot[only marks, mark=*, fill=white] coordinates"
                             s += "{(" + str(d.start) + "," + str(f.eval(d.start)) + ")};"
                             writer.write(s)
-                            if d.right:
+                            if d.inclusive_end:
                                 s = "\\addplot[only marks, mark=*, fill=black] coordinates"
                             else:
                                 s = "\\addplot[only marks, mark=*, fill=white] coordinates"
@@ -186,13 +166,30 @@ class PiecewiseFunction(Function):
             buffer.seek(0)
             tex = buffer.read()
         return tex
+    
+    def table_tex(self):
+        with StringIO() as buffer:
+            writer = LatexWriter(buffer)
+            with writer.environment("tabular", required=r"|c|c|"):
+                writer.write(r"\hline")
+                writer.write("$x$ & $f(x)$" + r" \\")
+                for x in range(-4,4):
+                    y = self.eval(x)
+                    writer.write(r"\hline")
+                    writer.write(f"{x} & {y}" + r" \\")
+                writer.write(r"\hline")
+            buffer.seek(0)
+            return buffer.read()
 
 
 if __name__ == "__main__":
     p1 = Polynomial({1:1})
+    I1 = Interval.from_string("[-1,1]")
     p2 = Polynomial({1:-1, 2:2}) - p1
+    I2 = Interval.from_string("(-1,4]")
+    p3 = deepcopy(p1)
+    I3 = Interval.from_string("[4,inf)")
 
-    pwf = PiecewiseFunction(domains=[Interval(-1,1,True,True), Interval(1,2,False,True)], functions=[p1,p2])
-    print(pwf.pgfplot())
+    pwf = PiecewiseFunction(domains=[I1, I2, I3], functions=[p1,p2, p3])
+    print(pwf.to_latex())
 
-    print(pwf.tex())
