@@ -23,10 +23,7 @@ preamble = r"""\documentclass{article}
 }"""
 
 
-divider_text = r"""\vspace{2in}
-\hrule
-\vspace{0.5in}
-"""
+divider_text = "\n" + r"\vspace{2.5in}" + "\n"
 
 adjectives = [
     "grimy", "dazzling", "sneaky", "lush", "brash", "mellow", "eerie", "quaint", "fierce",
