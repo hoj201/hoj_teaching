@@ -4,5 +4,8 @@ handout.tex:
 handout.pdf: handout.tex
 	latexmk --pdf handout.tex
 
+notes:
+	latexmk --pdf guided_notes.tex
+
 clean:
 	latexmk -CA

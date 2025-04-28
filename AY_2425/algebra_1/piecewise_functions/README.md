@@ -22,6 +22,7 @@ Run the python script
 make handout.pdf
 ```
 You can then open `handout.pdf`.  To clean up run `make clean`.
+When you print **you should print two pages per sheet - single sided**.
 
 ## Todo
  - [x] use exactly one line with a y-intercept for each match

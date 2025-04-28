@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage[paperwidth=5.5in, paperheight=8.5in, margin=0.2in]{geometry}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tgadventor}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+\pgfplotsset{
+    every axis/.append style={
+        scale only axis,
+        width=0.9\textwidth,
+        xtick={0,0.05,0.1},
+    }
+}
+\begin{document}
+\pagenumbering{gobble}
+\pagestyle{fancy}
+\large
+\input{part1}
+\pagebreak
+\input{part1}
+\pagebreak
+\input{part2}
+\pagebreak
+\input{part2}
+
+\end{document}
