@@ -1,2 +1,45 @@
 *.pyc
 __pycache__/*
+# LaTeX intermediate and output files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.run.xml
+
+# PDF and other compiled outputs
+*.pdf
+*.dvi
+*.ps
+
+# Editor backup files
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# pgfplots externalization
+pgfplotsexternal-*
+
+# latexmk specific
+latexmkrc
+*.latexmk
+
+# Subdirectories for pgfplots cache
+*_minted*
+_build/
+_output/
+external_figures/
+
