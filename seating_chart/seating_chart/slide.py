@@ -9,10 +9,10 @@ HEIGHT = 1080
 HEADER_SIZE = "54"
 FONT_SIZE = "44"
 FONT_FAMILY = "Helvetica"
-BG_COLOR = "green"
+BG_COLOR = "#13005e"
+BULLET = "\u2022"
 
-
-def make_slides(tables: List[Table], announcements: List[str], agenda_items: List[str]) -> ET.Element:    
+def make_slides(tables: List[Table], announcements: List[str], agenda: List[str], donows: List[str]) -> ET.Element:    
     # Create the root <svg> element with its attributes
     svg_attributes = {
         "width": str(WIDTH),
@@ -26,8 +26,9 @@ def make_slides(tables: List[Table], announcements: List[str], agenda_items: Lis
         "fill": BG_COLOR
     })
     insert_tables(tables, svg)
-    insert_agenda(agenda_items, svg)
+    insert_agenda(agenda, svg)
     insert_announcements(announcements, svg)
+    insert_donows(donows, svg)
     return svg
 
 def insert_tables(tables: List[Table], svg: ET.Element):
@@ -43,7 +44,7 @@ def insert_tables(tables: List[Table], svg: ET.Element):
             "cx": str(offset_x),
             "cy": str(offset_y),
             "r": str(dx//2),
-            "fill": "#ff4136",
+            "fill": "#5C0500",
             "stroke": "black",
             "stroke-width": "4"
         })
@@ -80,31 +81,44 @@ def insert_agenda(agenda_items: List[str], svg: ET.Element):
         "text-anchor": "left",
     })
     agenda.text = "Agenda"
-    for item in agenda_items:
-        element = ET.SubElement(agenda, 'tspan', {
-            "dy": "1.2em",
-            "x": str(agenda_x),
-            "font-size": FONT_SIZE,
-        })
-        element.text = item
+    insert_tspan_list(agenda, agenda_items)
 
 def insert_announcements(announcements: List[str], svg: ET.Element):
     width = int(svg.attrib["width"])
     height = int(svg.attrib["height"])
-    agenda_x = width-1.9*width//5
+    x = width-1.9*width//5
     ann_elem = ET.SubElement(svg, 'text', {
-        "x": str(agenda_x),
-        "y": str(height//2),
+        "x": str(x),
+        "y": str(height//3 + 50),
         "font-family": FONT_FAMILY,
         "font-size": HEADER_SIZE,
         "fill": "white",
         "text-anchor": "left",
     })
     ann_elem.text = "Announcements"
-    for announcement in announcements:
-        element = ET.SubElement(ann_elem, 'tspan', {
+    insert_tspan_list(ann_elem, announcements)
+
+
+def insert_donows(items: List[str], svg: ET.Element):
+    width = int(svg.attrib["width"])
+    height = int(svg.attrib["height"])
+    x = width-1.9*width//5
+    donow = ET.SubElement(svg, 'text', {
+        "x": str(x),
+        "y": str(2*height//3),
+        "font-family": FONT_FAMILY,
+        "font-size": HEADER_SIZE,
+        "fill": "white",
+        "text-anchor": "left",
+    })
+    donow.text = "Do Now"
+    insert_tspan_list(donow, items)
+
+def insert_tspan_list(parent: ET.Element, items: List[str]):
+    for item in items:
+        element = ET.SubElement(parent, 'tspan', {
             "dy": "1.2em",
-            "x": str(agenda_x),
+            "x": parent.attrib["x"],
             "font-size": FONT_SIZE,
         })
-        element.text = announcement
+        element.text = BULLET + " " + item

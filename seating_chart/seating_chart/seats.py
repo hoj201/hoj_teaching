@@ -42,10 +42,11 @@ def random_swap(student: Student, tables: List[Table]):
     swap_students(student, other_student, tables)
 
 
-def make_tables(roster: List[Student], num_tables: int) -> List[Table]:
-    # make random table groups
-    # repeatedly find the most uncomfortable student and make a random swap until the total comfort stabilizes
+def make_tables(roster: List[Student], max_table_size: int) -> List[Table]:
     unassigned_students = roster[:] # copy so original isn't modified
+    num_tables = len(roster) // max_table_size
+    if len(roster) % max_table_size != 0:
+        num_tables += 1
 
     # Assign preferential seating students first to tables 0,1,2
     front_row_students = [s for s in unassigned_students if s.preferential_seating]
@@ -59,10 +60,16 @@ def make_tables(roster: List[Student], num_tables: int) -> List[Table]:
     for _ in range(num_tables-3):
         tables.append(set())
     random.shuffle(unassigned_students)      # randomize order
-    for i, obj in enumerate(unassigned_students):
-        index = i % num_tables
-        if len(tables[index]) < 3:
-            tables[i % num_tables].add(obj) # distribute evenly
+    while len(unassigned_students) > 0:
+        student = unassigned_students.pop()
+        assigned = False
+        index = 0
+        while not assigned:
+            if len(tables[index]) < 3:
+                tables[index].add(student)
+                assigned = True
+            else:
+                index += 1
     return tables
 
 
