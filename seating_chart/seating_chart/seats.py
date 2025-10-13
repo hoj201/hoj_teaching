@@ -6,9 +6,10 @@ from typing import List, Set, Self
 guesses table groupings until one works"""
 
 class Student(object):
-    def __init__(self, name: str):
+    def __init__(self, name: str, preferential_seating = False):
         self.name = name
         self.avoids : Set[Self] = set()
+        self.preferential_seating = preferential_seating
 
     def __repr__(self):
         return f"Student({self.name})"
@@ -44,12 +45,24 @@ def random_swap(student: Student, tables: List[Table]):
 def make_tables(roster: List[Student], num_tables: int) -> List[Table]:
     # make random table groups
     # repeatedly find the most uncomfortable student and make a random swap until the total comfort stabilizes
-    shuffled = roster[:]         # copy so original isn’t modified
-    random.shuffle(shuffled)      # randomize order
-    
-    tables = [set() for _ in range(num_tables)]
-    for i, obj in enumerate(shuffled):
-        tables[i % num_tables].add(obj) # distribute evenly
+    unassigned_students = roster[:] # copy so original isn't modified
+
+    # Assign preferential seating students first to tables 0,1,2
+    front_row_students = [s for s in unassigned_students if s.preferential_seating]
+    random.shuffle(front_row_students)
+    tables = [set() for _ in range(3)]
+    for i, student in enumerate(front_row_students):
+        tables[i % 3].add(student) # distribute evenly
+        unassigned_students.remove(student)
+
+    # Assign the remainder of the students
+    for _ in range(num_tables-3):
+        tables.append(set())
+    random.shuffle(unassigned_students)      # randomize order
+    for i, obj in enumerate(unassigned_students):
+        index = i % num_tables
+        if len(tables[index]) < 3:
+            tables[i % num_tables].add(obj) # distribute evenly
     return tables
 
 
