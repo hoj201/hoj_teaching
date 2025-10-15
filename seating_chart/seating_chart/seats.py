@@ -42,7 +42,9 @@ def random_swap(student: Student, tables: List[Table]):
     swap_students(student, other_student, tables)
 
 
-def make_tables(roster: List[Student], max_table_size: int) -> List[Table]:
+def make_tables(roster: List[Student], max_table_size: int, seed=None) -> List[Table]:
+    if seed:
+        random.seed(seed)
     unassigned_students = roster[:] # copy so original isn't modified
     num_tables = len(roster) // max_table_size
     if len(roster) % max_table_size != 0:

@@ -4,6 +4,8 @@ import csv
 import json
 from typing import Dict
 from collections import defaultdict
+from datetime import datetime
+from hashlib import sha256
 
 
 periods = [
@@ -41,7 +43,9 @@ for period in periods:
                     )
                 )
     print(f"there are {len(students)} in {period}")
-    tables = make_tables(students, 3)
+    seed = datetime.now().strftime("%d/%m/%Y")
+    print(seed)
+    tables = make_tables(students, 3, seed=seed)
     svg = make_slides(
         tables, 
         announcements=announcements[period],
