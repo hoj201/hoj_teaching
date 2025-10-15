@@ -64,14 +64,8 @@ def make_tables(roster: List[Student], max_table_size: int, seed=None) -> List[T
     random.shuffle(unassigned_students)      # randomize order
     while len(unassigned_students) > 0:
         student = unassigned_students.pop()
-        assigned = False
-        index = 0
-        while not assigned:
-            if len(tables[index]) < 3:
-                tables[index].add(student)
-                assigned = True
-            else:
-                index += 1
+        smallest_table = min(*tables, key = lambda x: len(x))
+        smallest_table.add(student)
     return tables
 
 

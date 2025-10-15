@@ -43,9 +43,8 @@ for period in periods:
                     )
                 )
     print(f"there are {len(students)} in {period}")
-    seed = datetime.now().strftime("%d/%m/%Y")
-    print(seed)
-    tables = make_tables(students, 3, seed=seed)
+    doy = datetime.now().strftime("%b%d_%Y")
+    tables = make_tables(students, 3, seed=doy)
     svg = make_slides(
         tables, 
         announcements=announcements[period],
@@ -55,6 +54,6 @@ for period in periods:
     xml_string = ET.tostring(svg, encoding='unicode')
 
     # Save the string to a file
-    with open(f'welcome_slide_{period}.svg', 'w') as f:
+    with open(f'welcome_slide_{doy}_{period}.svg', 'w') as f:
         f.write(xml_string)
         print(f"File '{f.name}' has been created.")
