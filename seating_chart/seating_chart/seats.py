@@ -1,14 +1,14 @@
 import random
-from typing import List, Set, Self
+from typing import List, Set, Self, Tuple, Optional
 
 
 """Code here takes in a list of student seating preferences and randomly
 guesses table groupings until one works"""
 
 class Student(object):
-    def __init__(self, name: str, preferential_seating = False):
+    def __init__(self, name: str, preferential_seating = False, avoids: Optional[str] = None):
         self.name = name
-        self.avoids : Set[Self] = set()
+        self.avoids = avoids
         self.preferential_seating = preferential_seating
 
     def __repr__(self):
@@ -16,6 +16,12 @@ class Student(object):
 
 Table = Set[Student]
 
+def bad_table(table: Table):
+    for s1 in table:
+        for s2 in table:
+            if s1.avoids == s2.name:
+                return True
+    return False
 
 def swap_students(s1: Student, s2: Student, tables: List[Table]):
     t1, t2 = None, None
@@ -42,7 +48,7 @@ def random_swap(student: Student, tables: List[Table]):
     swap_students(student, other_student, tables)
 
 
-def make_tables(roster: List[Student], max_table_size: int, seed=None) -> List[Table]:
+def make_tables(roster: List[Student], max_table_size: int, seed: Optional[str]=None) -> List[Table]:
     if seed:
         random.seed(seed)
     unassigned_students = roster[:] # copy so original isn't modified
@@ -66,13 +72,6 @@ def make_tables(roster: List[Student], max_table_size: int, seed=None) -> List[T
         student = unassigned_students.pop()
         smallest_table = min(*tables, key = lambda x: len(x))
         smallest_table.add(student)
+    if any([bad_table(t) for t in tables]):
+        return make_tables(roster=roster, max_table_size=max_table_size, seed=seed + "67")
     return tables
-
-
-if __name__ == "__main__":
-    students_names = ["john", "paul", "sartre", "linda", "lucile", "jacky"]    
-    students = [Student(name) for name in students_names]
-    print("{} avoids {}".format(students[3], students[0]))
-    students[3].avoids.add(students[0])
-    tables = make_tables(students, 3)
-    print(tables)

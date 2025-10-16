@@ -39,7 +39,8 @@ for period in periods:
                 students.append(
                     Student(
                         name=row["first_name"],
-                        preferential_seating=row["preferential_seating"].strip().lower()=='yes'
+                        preferential_seating=row["preferential_seating"].strip().lower()=='yes',
+                        avoids=row["avoids"]
                     )
                 )
     print(f"there are {len(students)} in {period}")
