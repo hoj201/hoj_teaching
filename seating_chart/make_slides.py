@@ -4,7 +4,7 @@ import csv
 import json
 from typing import Dict
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from hashlib import sha256
 
 
@@ -44,7 +44,8 @@ for period in periods:
                     )
                 )
     print(f"there are {len(students)} in {period}")
-    doy = datetime.now().strftime("%b%d_%Y")
+    doy = (datetime.now() + timedelta(hours=24)).strftime("%b%d_%Y") #assuming your making slides for the next day
+    print(doy)
     tables = make_tables(students, 3, seed=doy)
     svg = make_slides(
         tables, 
