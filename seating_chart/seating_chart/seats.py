@@ -1,5 +1,5 @@
 import random
-from typing import List, Set, Self, Tuple, Optional
+from typing import List, Set, Optional
 
 
 """Code here takes in a list of student seating preferences and randomly

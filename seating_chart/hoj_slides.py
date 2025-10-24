@@ -3,8 +3,9 @@ from seating_chart.seats import make_tables, Student
 import csv
 from typing import Dict, List
 from collections import defaultdict
-from hashlib import sha256
+from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 periods = [
     "period_12",
@@ -21,7 +22,7 @@ def to_default_dict(d: Dict):
 
 def load_roster(period) -> List[Student]:
     students = list()
-    with open(f'rosters/{period}.csv', mode ='r')as file:
+    with open(f'{SCRIPT_DIR}/rosters/{period}.csv', mode ='r')as file:
         csvFile = csv.DictReader(file)
         for row in csvFile:
                 pref_seating = row["preferential_seating"].strip().lower()=='yes'

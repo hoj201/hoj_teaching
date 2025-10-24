@@ -1,7 +1,10 @@
 import streamlit as st
 from hoj_slides import generate
 from datetime import datetime, timedelta
+from pathlib import Path
 import json
+
+SCRIPT_DIR = Path(__file__).resolve().parent
 
 st.title("Seating Chart Slide Generator")
 
@@ -14,7 +17,7 @@ seed = st.text_input(
 
 
 st.header("Agenda")
-with open("agenda.json", "r") as f:
+with open(f"{SCRIPT_DIR}/agenda.json", "r") as f:
     default_agenda = json.load(f)
 
 agenda_string = st.text_area(
@@ -28,7 +31,7 @@ except json.decoder.JSONDecodeError as error:
 
 
 st.header("Do Nows")
-with open("do_now.json", "r") as f:
+with open(f"{SCRIPT_DIR}/do_now.json", "r") as f:
     default_do_now = json.load(f)
 
 do_now_string = st.text_area(
@@ -41,7 +44,7 @@ except json.decoder.JSONDecodeError as error:
     st.error(error)
 
 st.header("Announcements")
-with open("announcements.json", "r") as f:
+with open(f"{SCRIPT_DIR}/announcements.json", "r") as f:
     default_announcement = json.load(f)
 
 announcements_string = st.text_area(
