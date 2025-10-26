@@ -7,13 +7,6 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
-periods = [
-    "period_12",
-    "period_45",
-    "period_78",
-    "period_910"
-]
-
 def to_default_dict(d: Dict):
     output = defaultdict(lambda : d["default"])
     for k, v, in d.items():
@@ -35,7 +28,7 @@ def load_roster(period) -> List[Student]:
                 )
     return students
 
-def generate(agenda: Dict[str,List], announcements: Dict[str, List], do_now: Dict[str, List], seed=None):
+def generate(periods: List[str], agenda: Dict[str,List], announcements: Dict[str, List], do_now: Dict[str, List], seed=None):
     agenda = to_default_dict(agenda)
     announcements = to_default_dict(announcements)
     do_now = to_default_dict(do_now)

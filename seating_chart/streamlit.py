@@ -5,8 +5,17 @@ from pathlib import Path
 import json
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+periods = [
+    "period_12",
+    "period_45",
+    "period_78",
+    "period_910"
+]
 
 st.title("Seating Chart Slide Generator")
+
+st.header("Which blocks")
+selected_periods = st.multiselect("Blocks", options=periods)
 
 st.header("Random Seed")
 seed = (datetime.now() + timedelta(hours=24)).strftime("%b_%d_%Y")
@@ -57,7 +66,7 @@ except json.decoder.JSONDecodeError as error:
     st.error(error)
 
 if st.button("Generate slides"):
-    tables_by_period, slide_filenames = generate(agenda, announcements, do_now, seed=seed)
-    st.json(tables_by_period)
+    tables_by_period, slide_filenames = generate(selected_periods, agenda, announcements, do_now, seed=seed)
     for fn in slide_filenames:
         st.image(fn)
+    st.json(tables_by_period)
