@@ -57,4 +57,7 @@ except json.decoder.JSONDecodeError as error:
     st.error(error)
 
 if st.button("Generate slides"):
-    generate(agenda, announcements, do_now, seed=seed)
+    tables_by_period, slide_filenames = generate(agenda, announcements, do_now, seed=seed)
+    st.json(tables_by_period)
+    for fn in slide_filenames:
+        st.image(fn)
