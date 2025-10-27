@@ -1,9 +1,10 @@
 # Description
-Code for generating welcome slides
+To start the streamlit app do
 
 ```shell
-poetry run python make_slides.py
+poetry run streamlit run streamlit.py
 ```
+then use your browser to create the slides locally.
 
 You can customize the slides by editing
  - `agenda.json`

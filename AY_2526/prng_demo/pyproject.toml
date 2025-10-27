@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "seating-chart"
+name = "prng-demo"
 version = "0.1.0"
-description = ""
+description = "for demoing psuedo-random numbers"
 authors = ["hoj201 <hoj201@gmail.com>"]
 readme = "README.md"
 
