@@ -3,6 +3,8 @@ from hoj_slides import generate
 from datetime import datetime, timedelta
 from pathlib import Path
 import json
+import logging
+import os
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 periods = [
@@ -66,6 +68,9 @@ except json.decoder.JSONDecodeError as error:
     st.error(error)
 
 if st.button("Generate slides"):
+    if len([x for x in os.listdir('.') if x.endswith('.svg')]) >= 4:
+        logging.info("removing old svg files")
+        [os.remove(x) for x in os.listdir('.') if x.endswith('.svg')]
     tables_by_period, slide_filenames = generate(selected_periods, agenda, announcements, do_now, seed=seed)
     for fn in slide_filenames:
         st.image(fn)
