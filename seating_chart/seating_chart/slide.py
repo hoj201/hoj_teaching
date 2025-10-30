@@ -34,7 +34,7 @@ def make_slides(tables: List[Table], announcements: List[str], agenda: List[str]
 
 def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
     width = int(svg.attrib["width"])
-    height = int(svg.attrib["height"])
+    height = int(svg.attrib["height"])-100
     n_rows = ceil(sqrt(len(tables)))
     n_cols = n_rows # we will assume a square arrangement
     dx = min(width,height) // n_cols
@@ -43,7 +43,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
     if exam_mode:
         front_text = ET.SubElement(svg, 'text',{
             "x": str(width//3),
-            "y": 100,
+            "y": "100",
             "font-family": FONT_FAMILY,
             "font-size": HEADER_SIZE,
             "fill": "white",
@@ -52,7 +52,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
         front_text.text = "FRONT"
     for index, table in enumerate(tables):
         offset_x = (index % n_rows) * dx + dx//2
-        offset_y = (index // n_cols) * dx + dx//2
+        offset_y = (index // n_cols) * dx + dx//2 + 100 # add 100 to fit text at the top
         # Create the <circle> element as a sub-element of <svg>
         circle = ET.SubElement(svg, 'circle', {
             "cx": str(offset_x),
