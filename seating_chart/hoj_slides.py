@@ -28,10 +28,10 @@ def load_roster(period) -> List[Student]:
                 )
     return students
 
-def generate(periods: List[str], agenda: Dict[str,List], announcements: Dict[str, List], do_now: Dict[str, List], seed=None):
-    agenda = to_default_dict(agenda)
-    announcements = to_default_dict(announcements)
-    do_now = to_default_dict(do_now)
+def generate(periods: List[str], content: Dict[str, Dict], seed=None):
+    agenda = to_default_dict(content["agenda"])
+    announcements = to_default_dict(content["announcements"])
+    do_now = to_default_dict(content["do_now"])
     slide_filenames = []
     tables_by_period = dict()
     for period in periods:
