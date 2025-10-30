@@ -28,7 +28,7 @@ def load_roster(period) -> List[Student]:
                 )
     return students
 
-def generate(periods: List[str], content: Dict[str, Dict], seed=None):
+def generate(periods: List[str], content: Dict[str, Dict], max_table_size:int, exam_mode:bool, seed=None):
     agenda = to_default_dict(content["agenda"])
     announcements = to_default_dict(content["announcements"])
     do_now = to_default_dict(content["do_now"])
@@ -36,12 +36,13 @@ def generate(periods: List[str], content: Dict[str, Dict], seed=None):
     tables_by_period = dict()
     for period in periods:
         students = load_roster(period)
-        tables = make_tables(students, 3, seed=seed)
+        tables = make_tables(students, max_table_size=max_table_size, seed=seed)
         svg = make_slides(
             tables, 
             announcements=announcements[period],
             agenda = agenda[period],
-            donows = do_now[period]
+            donows = do_now[period],
+            exam_mode=exam_mode
         )
         xml_string = ET.tostring(svg, encoding='unicode')
 

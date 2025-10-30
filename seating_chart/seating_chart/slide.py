@@ -1,5 +1,6 @@
 from .seats import Table
 from typing import List
+from math import sqrt, ceil
 
 import xml.etree.ElementTree as ET
 
@@ -12,7 +13,7 @@ FONT_FAMILY = "Helvetica"
 BG_COLOR = "#13005e"
 BULLET = "\u2022"
 
-def make_slides(tables: List[Table], announcements: List[str], agenda: List[str], donows: List[str]) -> ET.Element:    
+def make_slides(tables: List[Table], announcements: List[str], agenda: List[str], donows: List[str], exam_mode: bool) -> ET.Element:    
     # Create the root <svg> element with its attributes
     svg_attributes = {
         "width": str(WIDTH),
@@ -25,20 +26,33 @@ def make_slides(tables: List[Table], announcements: List[str], agenda: List[str]
         "height": "100%",
         "fill": BG_COLOR
     })
-    insert_tables(tables, svg)
+    insert_tables(tables, svg, exam_mode)
     insert_agenda(agenda, svg)
     insert_announcements(announcements, svg)
     insert_donows(donows, svg)
     return svg
 
-def insert_tables(tables: List[Table], svg: ET.Element):
+def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
     width = int(svg.attrib["width"])
-    dx = width // 5
-    if len(tables) > 9:
-        raise ValueError("Slide code assumes fewer than 9 tables")
+    height = int(svg.attrib["height"])
+    n_rows = ceil(sqrt(len(tables)))
+    n_cols = n_rows # we will assume a square arrangement
+    dx = min(width,height) // n_cols
+    if len(tables) > 36:
+        raise ValueError("Slide code assumes fewer than 36 tables")
+    if exam_mode:
+        front_text = ET.SubElement(svg, 'text',{
+            "x": str(width//3),
+            "y": 100,
+            "font-family": FONT_FAMILY,
+            "font-size": HEADER_SIZE,
+            "fill": "white",
+            "text-anchor": "middle",
+        })
+        front_text.text = "FRONT"
     for index, table in enumerate(tables):
-        offset_x = (index % 3) * dx + dx//2
-        offset_y = (index // 3) * dx + dx//2
+        offset_x = (index % n_rows) * dx + dx//2
+        offset_y = (index // n_cols) * dx + dx//2
         # Create the <circle> element as a sub-element of <svg>
         circle = ET.SubElement(svg, 'circle', {
             "cx": str(offset_x),
@@ -58,7 +72,8 @@ def insert_tables(tables: List[Table], svg: ET.Element):
             "fill": "white",
             "text-anchor": "middle",
         })
-        t1.text = f"Table {index+1}" # Set the text content inside the tag
+        if not exam_mode:
+            t1.text = f"Table {index+1}" # Set the text content inside the tag
         for student in table:
             t1_student = ET.SubElement(t1, 'tspan', {
                 "x": str(offset_x),
