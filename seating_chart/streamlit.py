@@ -1,6 +1,5 @@
 import streamlit as st
-from hoj_slides import generate
-from datetime import datetime, timedelta
+from hoj_slides import generate, Content
 from pathlib import Path
 import json
 import logging
@@ -19,13 +18,6 @@ st.title("Seating Chart Slide Generator")
 st.header("Which blocks")
 selected_periods = st.multiselect("Blocks", options=periods)
 
-st.header("Random Seed")
-seed = (datetime.now() + timedelta(hours=24)).strftime("%b_%d_%Y")
-seed = st.text_input(
-    label="seed",
-    value=seed
-)
-
 
 st.header("Content")
 with open(f"{SCRIPT_DIR}/default_content.json", "r") as f:
@@ -40,6 +32,11 @@ try:
     content = json.loads(content_string)
 except json.decoder.JSONDecodeError as error:
     st.error(error)
+
+try:
+    content = Content.from_dict(content)
+except Exception as e:
+    st.error(e)
 
 st.header("Max Table Size")
 max_table_size = st.text_input("max_table_size", value="3", max_chars=2)
@@ -57,7 +54,7 @@ if st.button("Generate slides"):
     if len([x for x in os.listdir('.') if x.endswith('.svg')]) >= 4:
         logging.info("removing old svg files")
         [os.remove(x) for x in os.listdir('.') if x.endswith('.svg')]
-    tables_by_period, slide_filenames = generate(selected_periods, content, max_table_size, exam_mode, seed=seed)
+    tables_by_period, slide_filenames = generate(selected_periods, content, max_table_size, exam_mode)
     for fn in slide_filenames:
         st.image(fn)
     st.json(tables_by_period)

@@ -4,14 +4,36 @@ import csv
 from typing import Dict, List
 from collections import defaultdict
 from pathlib import Path
+from dataclasses import dataclass
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
-def to_default_dict(d: Dict):
-    output = defaultdict(lambda : d["default"])
-    for k, v, in d.items():
-         output[k] = v
-    return output
+@dataclass
+class Content():
+    agenda: dict
+    do_now: dict
+    announcements: dict
+    seeds: dict
+
+    @classmethod
+    def from_dict(cls, d: dict):
+        agenda = cls.to_default_dict(d["agenda"])
+        do_now = cls.to_default_dict(d["do_now"])
+        announcements = cls.to_default_dict(d["announcements"])
+        seeds = d["seeds"]
+        return cls(agenda, do_now, announcements, seeds)
+
+    @staticmethod
+    def to_default_dict(d: Dict):
+        output = defaultdict(lambda : d["default"])
+        for k, v, in d.items():
+            output[k] = v
+        return output
+          
+    
+
+
+
 
 def load_roster(period) -> List[Student]:
     students = list()
@@ -28,13 +50,15 @@ def load_roster(period) -> List[Student]:
                 )
     return students
 
-def generate(periods: List[str], content: Dict[str, Dict], max_table_size:int, exam_mode:bool, seed=None):
-    agenda = to_default_dict(content["agenda"])
-    announcements = to_default_dict(content["announcements"])
-    do_now = to_default_dict(content["do_now"])
+def generate(periods: List[str], content: Content, max_table_size:int, exam_mode:bool):
+    agenda = content.agenda
+    announcements = content.announcements
+    do_now = content.do_now
+    seeds = content.seeds
     slide_filenames = []
     tables_by_period = dict()
     for period in periods:
+        seed = seeds[period]
         students = load_roster(period)
         tables = make_tables(students, max_table_size=max_table_size, seed=seed)
         svg = make_slides(
