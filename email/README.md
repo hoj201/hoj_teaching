@@ -12,8 +12,9 @@ Desired Features:
 
 
  TODO:
- - [ ] Get student emails in csv with names
- - [ ] Put email data in the json structure
+ - [x] Get student emails in csv with names
+ - [x] Put email data in the json structure
+ 
  ```json
 {
     "lastname": "Ochoa",
