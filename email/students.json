@@ -1,0 +1,1714 @@
+[
+    {
+        "firstname": "Alina",
+        "lastname": "Ochoa",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Yosmaira",
+                "lastname": "Ochoa",
+                "contact_name": "Mrs. Ochoa, Yosmaira (Mother)",
+                "contact_email": "emailmaira@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Gabriel",
+                "lastname": "Ochoa",
+                "contact_name": "Mr. Ochoa, Gabriel (Father)",
+                "contact_email": "mindflixfilms@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27ochoa@district41.org"
+    },
+    {
+        "firstname": "Angela",
+        "lastname": "Beltran",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Griselda",
+                "lastname": "Solis",
+                "contact_name": "Ms. Solis, Griselda (Mother)",
+                "contact_email": "griseldasolis14@icloud.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27beltran@district41.org"
+    },
+    {
+        "firstname": "Anthony",
+        "lastname": "Palacios",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Rosario",
+                "lastname": "Castillo",
+                "contact_name": "Mrs. Castillo, Rosario (Mother)",
+                "contact_email": "rsr_cstll@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Anthony",
+                "lastname": "Palacios",
+                "contact_name": "Mr. Palacios, Anthony (Father)",
+                "contact_email": "apalacios1122@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27palacios@district41.org"
+    },
+    {
+        "firstname": "Braedenn",
+        "lastname": "Villarruel",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Niochtka N.",
+                "lastname": "Salinas",
+                "contact_name": "Mrs. Salinas, Niochtka N. (Mother)",
+                "contact_email": "niochtka@gmail.com"
+            },
+            {
+                "relation": "stepfather",
+                "title": "Mr.",
+                "firstname": "Juan",
+                "lastname": "Salinas",
+                "contact_name": "Mr. Salinas, Juan (Stepfather)",
+                "contact_email": "jjsp1982@outlook.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27villarruel@district41.org"
+    },
+    {
+        "firstname": "Brandon",
+        "lastname": "Andrews",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Sandra",
+                "lastname": "Andrews",
+                "contact_name": "Mrs. Andrews, Sandra (Mother)",
+                "contact_email": "andrewsfam167@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Brian",
+                "lastname": "Andrews",
+                "contact_name": "Mr. Andrews, Brian (Father)",
+                "contact_email": "brian@stuckeyconstruction.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27andrews@district41.org"
+    },
+    {
+        "firstname": "Cameron",
+        "lastname": "Santiago",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Diana",
+                "lastname": "Santiago",
+                "contact_name": "Mrs. Santiago, Diana (Mother)",
+                "contact_email": "nascha_aso@yahoo.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27santiago@district41.org"
+    },
+    {
+        "firstname": "Dominic",
+        "lastname": "Heintz",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Adriana",
+                "lastname": "Cruz-Tapia",
+                "contact_name": "Ms. Cruz-Tapia, Adriana (Mother)",
+                "contact_email": "acruztapia31@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27heintzd@district41.org"
+    },
+    {
+        "firstname": "Dominic",
+        "lastname": "Blue",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Elizabeth Alice",
+                "lastname": "Fagan",
+                "contact_name": "Ms. Fagan, Elizabeth Alice (Mother)",
+                "contact_email": "metzlerelizabeth@yahoo.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27blue@district41.org"
+    },
+    {
+        "firstname": "Elinor",
+        "lastname": "Hall",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Katie",
+                "lastname": "Hall",
+                "contact_name": "Ms. Hall, Katie (Mother)",
+                "contact_email": "katiehall83@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Charles",
+                "lastname": "Hall",
+                "contact_name": "Mr. Hall, Charles (Father)",
+                "contact_email": "charleshall14@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27hall@district41.org"
+    },
+    {
+        "firstname": "Evelyn",
+        "lastname": "Pasternak",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Alessa",
+                "lastname": "Pasternak",
+                "contact_name": "Mrs. Pasternak, Alessa (Mother)",
+                "contact_email": "aalope03@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Matthew",
+                "lastname": "Pasternak",
+                "contact_name": "Mr. Pasternak, Matthew (Father)",
+                "contact_email": "matt.pasternak@yahoo.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27pasternak@district41.org"
+    },
+    {
+        "firstname": "Gavin",
+        "lastname": "Sosa",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Saul",
+                "lastname": "Sosa",
+                "contact_name": "Mr. Sosa, Saul (Father)",
+                "contact_email": "saul.sosa87@yahoo.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Katherine",
+                "lastname": "Kasper",
+                "contact_name": "Mrs. Kasper, Katherine (Mother)",
+                "contact_email": "saul.sosa@bcu.org"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27sosa@district41.org"
+    },
+    {
+        "firstname": "Jonathan",
+        "lastname": "Morales",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Elizabeth",
+                "lastname": "Arteaga",
+                "contact_name": "Mrs. Arteaga, Elizabeth (Mother)",
+                "contact_email": "suzu22mor@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Francisco Emmanuel",
+                "lastname": "Morales",
+                "contact_name": "Mr. Morales, Francisco Emmanuel (Father)",
+                "contact_email": "yiyo_m31@hotmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27morales@district41.org"
+    },
+    {
+        "firstname": "Juliett",
+        "lastname": "Chacon",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Karina",
+                "lastname": "Gonzalez",
+                "contact_name": "Mrs. Gonzalez, Karina (Mother)",
+                "contact_email": "kgonzalez78@hotmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Alberto",
+                "lastname": "Chacon",
+                "contact_name": "Mr. Chacon, Alberto (Father)",
+                "contact_email": "alchacon1080@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27chacon@district41.org"
+    },
+    {
+        "firstname": "Kylie",
+        "lastname": "Aguilar",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Aguilar",
+                "firstname": "Alexander",
+                "lastname": "",
+                "contact_name": "Aguilar, Alexander (Father)",
+                "contact_email": "alexss76@outlook.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Fabian",
+                "firstname": "Alba",
+                "lastname": "",
+                "contact_name": "Fabian, Alba (Mother)",
+                "contact_email": "albita50@yahoo.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27aguilar@district41.org"
+    },
+    {
+        "firstname": "Landyn",
+        "lastname": "Seger",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Lauryn",
+                "lastname": "Seger",
+                "contact_name": "Mrs. Seger, Lauryn (Mother)",
+                "contact_email": "lauryn.seger@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Jeremy",
+                "lastname": "Seger",
+                "contact_name": "Mr. Seger, Jeremy (Father)",
+                "contact_email": "jeremy.seger@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27seger@district41.org"
+    },
+    {
+        "firstname": "Leron",
+        "lastname": "McGregor",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Gerard Leron II",
+                "lastname": "Mcgregor",
+                "contact_name": "Mr. Mcgregor, Gerard Leron II (Father)",
+                "contact_email": "gerardmcgregor022@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27mcgregor@district41.org"
+    },
+    {
+        "firstname": "Madison",
+        "lastname": "Dorsey",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Joanna",
+                "lastname": "Dorsey",
+                "contact_name": "Mrs. Dorsey, Joanna (Mother)",
+                "contact_email": "joanna.dorsey27@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Mitchell",
+                "lastname": "Dorsey",
+                "contact_name": "Mr. Dorsey, Mitchell (Father)",
+                "contact_email": "mitchell.dorsey87@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27dorseym@district41.org"
+    },
+    {
+        "firstname": "Maverick",
+        "lastname": "Baxter",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Ashlee",
+                "lastname": "Baxter",
+                "contact_name": "Mrs. Baxter, Ashlee (Mother)",
+                "contact_email": "ashleebaxter629@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Allen",
+                "lastname": "Baxter",
+                "contact_name": "Mr. Baxter, Allen (Father)",
+                "contact_email": "abaxter99@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27baxter@district41.org"
+    },
+    {
+        "firstname": "Nadia",
+        "lastname": "Akanbi",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Afolake Omolara",
+                "lastname": "Akanbi",
+                "contact_name": "Ms. Akanbi, Afolake Omolara (Mother)",
+                "contact_email": "afolake.akanbi@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27akanbi@district41.org"
+    },
+    {
+        "firstname": "Nash",
+        "lastname": "Masura",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Kimberly",
+                "lastname": "Masura",
+                "contact_name": "Ms. Masura, Kimberly (Mother)",
+                "contact_email": "kim.masura@hotmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Ryan",
+                "lastname": "Masura",
+                "contact_name": "Mr. Masura, Ryan (Father)",
+                "contact_email": "rmasura@leopardo.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27masura@district41.org"
+    },
+    {
+        "firstname": "Troy",
+        "lastname": "Howard",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Roiann",
+                "lastname": "Howard",
+                "contact_name": "Mrs. Howard, Roiann (Mother)",
+                "contact_email": "roiannhoward@aol.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Christopher",
+                "lastname": "Howard",
+                "contact_name": "Mr. Howard, Christopher (Father)",
+                "contact_email": "dragonsbogo@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27howard@district41.org"
+    },
+    {
+        "firstname": "Valeria",
+        "lastname": "Chairez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Neave",
+                "firstname": "Rosa",
+                "lastname": "",
+                "contact_name": "Neave, Rosa (Mother)",
+                "contact_email": "zac05.fc@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Fernando",
+                "lastname": "Chairez",
+                "contact_name": "Mr. Chairez, Fernando (Father)",
+                "contact_email": "zac05.fc@gmail.com"
+            }
+        ],
+        "course": "1-2(A) Math (7)",
+        "email": "27chairez@district41.org"
+    },
+    {
+        "firstname": "Adam",
+        "lastname": "Wysocki",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Kevin",
+                "lastname": "Wysocki",
+                "contact_name": "Mr. Wysocki, Kevin (Father)",
+                "contact_email": "kwysocki81@gmail.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Ruo",
+                "lastname": "Wysocki",
+                "contact_name": "Mrs. Wysocki, Ruo (Mother)",
+                "contact_email": "rbc1124@hotmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27wysocki@district41.org"
+    },
+    {
+        "firstname": "Addison",
+        "lastname": "Kitzerow",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Sabrina II",
+                "lastname": "Kitzerow",
+                "contact_name": "Mrs. Kitzerow, Sabrina II (Mother)",
+                "contact_email": "sabrina.kitzerow@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Brian",
+                "lastname": "Kitzerow",
+                "contact_name": "Mr. Kitzerow, Brian (Father)",
+                "contact_email": "kitz24@hotmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27kitzerow@district41.org"
+    },
+    {
+        "firstname": "Anna",
+        "lastname": "Robaczewski",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mccormick",
+                "firstname": "Karen M",
+                "lastname": "",
+                "contact_name": "Mccormick, Karen M (Mother)",
+                "contact_email": "erijamanna75@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Robaczewski",
+                "firstname": "David J",
+                "lastname": "",
+                "contact_name": "Robaczewski, David J (Father)",
+                "contact_email": "davejr967@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27robaczewski@district41.org"
+    },
+    {
+        "firstname": "Javier",
+        "lastname": "Montes",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Macias",
+                "firstname": "Nancy",
+                "lastname": "",
+                "contact_name": "Macias, Nancy (Mother)",
+                "contact_email": "nancy_mcs@yahoo.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27montes@district41.org"
+    },
+    {
+        "firstname": "Jocelyn",
+        "lastname": "Horton",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Christine Marie",
+                "lastname": "Horton",
+                "contact_name": "Mrs. Horton, Christine Marie (Mother)",
+                "contact_email": "breezy80@att.net"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Ryan Gerald",
+                "lastname": "Horton",
+                "contact_name": "Mr. Horton, Ryan Gerald (Father)",
+                "contact_email": "rh513@att.net"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27horton@district41.org"
+    },
+    {
+        "firstname": "Joseph",
+        "lastname": "Kaye",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Cassie Lee",
+                "lastname": "Cummings",
+                "contact_name": "Ms. Cummings, Cassie Lee (Mother)",
+                "contact_email": "kayec711@live.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27kaye@district41.org"
+    },
+    {
+        "firstname": "Katalyna",
+        "lastname": "Trejo",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Wanda",
+                "lastname": "Trejo",
+                "contact_name": "Ms. Trejo, Wanda (Mother)",
+                "contact_email": "wram03@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27trejok@district41.org"
+    },
+    {
+        "firstname": "Kendall",
+        "lastname": "OBrien",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Kathy",
+                "lastname": "Obrien",
+                "contact_name": "Mrs. Obrien, Kathy (Mother)",
+                "contact_email": "ksobrien2011@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Alan",
+                "lastname": "Obrien",
+                "contact_name": "Mr. Obrien, Alan (Father)",
+                "contact_email": "aobrien53@yahoo.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27obrien@district41.org"
+    },
+    {
+        "firstname": "Kimberly",
+        "lastname": "Diaz",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Gabriella",
+                "lastname": "Nava",
+                "contact_name": "Ms. Nava, Gabriella (Mother)",
+                "contact_email": "gabynava743@gmail.com"
+            },
+            {
+                "relation": "stepfather",
+                "title": "Estrada",
+                "firstname": "Javier",
+                "lastname": "",
+                "contact_name": "Estrada, Javier (Stepfather)",
+                "contact_email": "gabynava743@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27diaz@district41.org"
+    },
+    {
+        "firstname": "Leilani",
+        "lastname": "Martinez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Sandra Nolia",
+                "lastname": "Rocha",
+                "contact_name": "Mrs. Rocha, Sandra Nolia (Mother)",
+                "contact_email": "lalimartinxz@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Enrique",
+                "lastname": "Martinez Lara",
+                "contact_name": "Mr. Martinez Lara, Enrique (Father)",
+                "contact_email": "enrique121312@icloud.com"
+            },
+            {
+                "relation": "sister",
+                "title": "Ms.",
+                "firstname": "Zitlali",
+                "lastname": "Martinez",
+                "contact_name": "Ms. Martinez, Zitlali (Sister)",
+                "contact_email": "zitlalimartinezx@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27martinez@district41.org"
+    },
+    {
+        "firstname": "Leonel",
+        "lastname": "Salinas",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Brenda",
+                "lastname": "Salinas",
+                "contact_name": "Mrs. Salinas, Brenda (Mother)",
+                "contact_email": "brendasalinas025@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Estevan",
+                "lastname": "Salinas",
+                "contact_name": "Mr. Salinas, Estevan (Father)",
+                "contact_email": "salinaser@aol.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27salinas@district41.org"
+    },
+    {
+        "firstname": "Madeleine",
+        "lastname": "Roman Peralta",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Gregorio",
+                "lastname": "Roman Torres",
+                "contact_name": "Mr. Roman Torres, Gregorio (Father)",
+                "contact_email": "gregorioroman55@yahoo.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Mila",
+        "lastname": "Martin",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Viktoriia V",
+                "lastname": "Martin",
+                "contact_name": "Mrs. Martin, Viktoriia V (Mother)",
+                "contact_email": "viktoriiamartin@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Brent Elliot",
+                "lastname": "Martin",
+                "contact_name": "Mr. Martin, Brent Elliot (Father)",
+                "contact_email": "brentmartin82@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27martin@district41.org"
+    },
+    {
+        "firstname": "Nathan",
+        "lastname": "Nickles",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Julie",
+                "lastname": "Nickles",
+                "contact_name": "Mrs. Nickles, Julie (Mother)",
+                "contact_email": "luvmaegan@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Scott",
+                "lastname": "Nickles",
+                "contact_name": "Mr. Nickles, Scott (Father)",
+                "contact_email": "nicksa911@aol.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27nickles@district41.org"
+    },
+    {
+        "firstname": "Riley",
+        "lastname": "Silverman",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Silverman",
+                "firstname": "Erin",
+                "lastname": "",
+                "contact_name": "Silverman, Erin (Mother)",
+                "contact_email": "erin.silverman.3@alight.com"
+            },
+            {
+                "relation": "father",
+                "title": "Silverman",
+                "firstname": "Rob",
+                "lastname": "",
+                "contact_name": "Silverman, Rob (Father)",
+                "contact_email": "rtsilver42@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27silverman@district41.org"
+    },
+    {
+        "firstname": "Ryan",
+        "lastname": "Donohue",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Donohue",
+                "firstname": "Jennifer",
+                "lastname": "",
+                "contact_name": "Donohue, Jennifer (Mother)",
+                "contact_email": "jvdonohue82@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Donohue",
+                "firstname": "Gene",
+                "lastname": "",
+                "contact_name": "Donohue, Gene (Father)",
+                "contact_email": "gdonohue77@yahoo.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27donohue@district41.org"
+    },
+    {
+        "firstname": "Sophia",
+        "lastname": "Guadarrama",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Bridget Nicole",
+                "lastname": "Marco",
+                "contact_name": "Ms. Marco, Bridget Nicole (Mother)",
+                "contact_email": "bridgetmarco@yahoo.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27guadarrama@district41.org"
+    },
+    {
+        "firstname": "Travis",
+        "lastname": "Baumgardner",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Erin",
+                "lastname": "Baumgardner",
+                "contact_name": "Ms. Baumgardner, Erin (Mother)",
+                "contact_email": "schubi1204@aol.com"
+            },
+            {
+                "relation": "father",
+                "title": "Baumgardner",
+                "firstname": "Brent",
+                "lastname": "",
+                "contact_name": "Baumgardner, Brent (Father)",
+                "contact_email": "baum.parents@gmail.com"
+            }
+        ],
+        "course": "4-5(A) Math (7)",
+        "email": "27baumgardner@district41.org"
+    },
+    {
+        "firstname": "Adan",
+        "lastname": "Tellez Velazquez",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Tellez",
+                "firstname": "Adan",
+                "lastname": "",
+                "contact_name": "Tellez, Adan (Father)",
+                "contact_email": "adantellez499@gmail.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Velazquez",
+                "firstname": "Cecilia",
+                "lastname": "Tovar",
+                "contact_name": "Velazquez Tovar, Cecilia (Mother)",
+                "contact_email": "adantellez499@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Anthony",
+        "lastname": "Gomez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Norma A",
+                "lastname": "Gomez",
+                "contact_name": "Ms. Gomez, Norma A (Mother)",
+                "contact_email": "normaigomez@ymail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Ramiro",
+                "lastname": "Gomez",
+                "contact_name": "Mr. Gomez, Ramiro (Father)",
+                "contact_email": "ramirogomez48@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27gomez@district41.org"
+    },
+    {
+        "firstname": "April",
+        "lastname": "Custodio",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Vanessa",
+                "lastname": "Bahena",
+                "contact_name": "Ms. Bahena, Vanessa (Mother)",
+                "contact_email": "vanebahena03@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27custodio@district41.org"
+    },
+    {
+        "firstname": "Axel",
+        "lastname": "Santana Garcia",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Nereyda",
+                "lastname": "Garcia Custodia",
+                "contact_name": "Mrs. Garcia Custodia, Nereyda (Mother)",
+                "contact_email": "nereg1888@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Agripino",
+                "lastname": "Santana Macedo",
+                "contact_name": "Mr. Santana Macedo, Agripino (Father)",
+                "contact_email": "nereg1888@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Carlos",
+        "lastname": "Reyes",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Diana",
+                "lastname": "Robles-Reyes",
+                "contact_name": "Mrs. Robles-Reyes, Diana (Mother)",
+                "contact_email": "dianarreyes6@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Jose M",
+                "lastname": "Reyes",
+                "contact_name": "Mr. Reyes, Jose M (Father)",
+                "contact_email": "dianarreyes6@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27reyesc@district41.org"
+    },
+    {
+        "firstname": "Daisy",
+        "lastname": "Martinez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Brenda",
+                "lastname": "Manjarrez-Rodriguez",
+                "contact_name": "Ms. Manjarrez-Rodriguez, Brenda (Mother)",
+                "contact_email": "richi13.rm88@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Hernandez",
+                "firstname": "Ricardo",
+                "lastname": "",
+                "contact_name": "Hernandez, Ricardo (Father)",
+                "contact_email": "--"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27martinez@district41.org"
+    },
+    {
+        "firstname": "Gabriella",
+        "lastname": "Kwasny",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Amanda Marie",
+                "lastname": "Raatz",
+                "contact_name": "Mrs. Raatz, Amanda Marie (Mother)",
+                "contact_email": "mandiemarie193@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27kwasny@district41.org"
+    },
+    {
+        "firstname": "Jaiden",
+        "lastname": "Avelar",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Aviel",
+                "lastname": "Avelar",
+                "contact_name": "Mr. Avelar, Aviel (Father)",
+                "contact_email": "aviel_avelar@yahoo.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Tiffany Lynn",
+                "lastname": "Avelar",
+                "contact_name": "Mrs. Avelar, Tiffany Lynn (Mother)",
+                "contact_email": "lukacst92@hotmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27avelar@district41.org"
+    },
+    {
+        "firstname": "Leo Anthony",
+        "lastname": "Avila",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Herrera",
+                "firstname": "Cristina Ana",
+                "lastname": "",
+                "contact_name": "Herrera, Cristina Ana (Mother)",
+                "contact_email": "cristina.herrera99@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Avila",
+                "firstname": "Miguel Angel",
+                "lastname": "",
+                "contact_name": "Avila, Miguel Angel (Father)",
+                "contact_email": "avilamiguel978@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27avila@district41.org"
+    },
+    {
+        "firstname": "Lillianna",
+        "lastname": "Richford",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Mikayla Cassandra",
+                "lastname": "Richford",
+                "contact_name": "Ms. Richford, Mikayla Cassandra (Mother)",
+                "contact_email": "lillianna3513@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27richford@district41.org"
+    },
+    {
+        "firstname": "Maia",
+        "lastname": "Robledo Carrasco",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Maria Guadalupe",
+                "lastname": "Carrasco",
+                "contact_name": "Ms. Carrasco, Maria Guadalupe (Mother)",
+                "contact_email": "carrasco.guadalupe@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Robledo",
+                "firstname": "Ricardo",
+                "lastname": "",
+                "contact_name": "Robledo, Ricardo (Father)",
+                "contact_email": "doricky2000@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Marco",
+        "lastname": "Antonio Hernandez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Maria Isabel",
+                "lastname": "Hernandez Gomez",
+                "contact_name": "Mrs. Hernandez Gomez, Maria Isabel (Mother)",
+                "contact_email": "mh6128496@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Marcos Sr.",
+                "lastname": "Antonio Reyes",
+                "contact_name": "Mr. Antonio Reyes, Marcos Sr. (Father)",
+                "contact_email": "correajennifer967@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Mia",
+        "lastname": "Craft",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Holli",
+                "lastname": "Craft",
+                "contact_name": "Mrs. Craft, Holli (Mother)",
+                "contact_email": "miasmommy16@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Jeremy",
+                "lastname": "Craft",
+                "contact_name": "Mr. Craft, Jeremy (Father)",
+                "contact_email": "jokerswild1016@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27craft@district41.org"
+    },
+    {
+        "firstname": "Rene",
+        "lastname": "Garcia",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Vianey",
+                "lastname": "Garcia",
+                "contact_name": "Mrs. Garcia, Vianey (Mother)",
+                "contact_email": "ayala82000@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Rene",
+                "lastname": "Garcia",
+                "contact_name": "Mr. Garcia, Rene (Father)",
+                "contact_email": "rene4@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27garcia@district41.org"
+    },
+    {
+        "firstname": "Romeo",
+        "lastname": "Hernandez",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Jasmine",
+                "lastname": "Vargas",
+                "contact_name": "Ms. Vargas, Jasmine (Mother)",
+                "contact_email": "vargas_1995@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Julian",
+                "lastname": "Hernandez",
+                "contact_name": "Mr. Hernandez, Julian (Father)",
+                "contact_email": "alwaystrue21@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27antoniohernandez@district41.org"
+    },
+    {
+        "firstname": "Sofia",
+        "lastname": "Figueras",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Ana Dayma",
+                "lastname": "Figueras",
+                "contact_name": "Mrs. Figueras, Ana Dayma (Mother)",
+                "contact_email": "anahenry2807@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Henry",
+                "lastname": "Figueras",
+                "contact_name": "Mr. Figueras, Henry (Father)",
+                "contact_email": "henryfigueras@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27figueras@district41.org"
+    },
+    {
+        "firstname": "Susana",
+        "lastname": "Saldana Leanos",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Leanos",
+                "firstname": "Sendi",
+                "lastname": "",
+                "contact_name": "Leanos, Sendi (Mother)",
+                "contact_email": "saldanacarlos136@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Saldana",
+                "firstname": "Carlos Cirilo",
+                "lastname": "",
+                "contact_name": "Saldana, Carlos Cirilo (Father)",
+                "contact_email": "saldanacarlos136@gmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Vera",
+        "lastname": "Huse",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Jennifer",
+                "lastname": "Huse",
+                "contact_name": "Mrs. Huse, Jennifer (Mother)",
+                "contact_email": "jlhuse@hotmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Edward",
+                "lastname": "Huse",
+                "contact_name": "Mr. Huse, Edward (Father)",
+                "contact_email": "edwardroberth@hotmail.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27huse@district41.org"
+    },
+    {
+        "firstname": "Xavier",
+        "lastname": "Dyczewski",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Beata",
+                "lastname": "Dyczewski",
+                "contact_name": "Ms. Dyczewski, Beata (Mother)",
+                "contact_email": "beatadycz@yahoo.com"
+            }
+        ],
+        "course": "7-8(A) Math (7)",
+        "email": "27dyczewski@district41.org"
+    },
+    {
+        "firstname": "Aiden",
+        "lastname": "Edmonson",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Ashley Patrice",
+                "lastname": "Edmonson",
+                "contact_name": "Ms. Edmonson, Ashley Patrice (Mother)",
+                "contact_email": "edmonsonashley975@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27edmonson@district41.org"
+    },
+    {
+        "firstname": "Alexia",
+        "lastname": "Sparkman",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Amanda",
+                "lastname": "Sparkman",
+                "contact_name": "Mrs. Sparkman, Amanda (Mother)",
+                "contact_email": "a_sparkman@hotmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Kevin",
+                "lastname": "Sparkman",
+                "contact_name": "Mr. Sparkman, Kevin (Father)",
+                "contact_email": "spark2421@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27sparkman@district41.org"
+    },
+    {
+        "firstname": "Allyahnii",
+        "lastname": "Uriostegui",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Lisa L",
+                "lastname": "Magana",
+                "contact_name": "Ms. Magana, Lisa L (Mother)",
+                "contact_email": "allyahnii@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Francisco",
+                "lastname": "Uriostegui",
+                "contact_name": "Mr. Uriostegui, Francisco (Father)",
+                "contact_email": "cisco102211@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27uriostegui@district41.org"
+    },
+    {
+        "firstname": "Ari",
+        "lastname": "Lang",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Mallory Suzanne",
+                "lastname": "Lang",
+                "contact_name": "Mrs. Lang, Mallory Suzanne (Mother)",
+                "contact_email": "mallorylang10@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Dov Louis",
+                "lastname": "Lang",
+                "contact_name": "Mr. Lang, Dov Louis (Father)",
+                "contact_email": "dovlang@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27lang@district41.org"
+    },
+    {
+        "firstname": "Ayden",
+        "lastname": "Gomez",
+        "contacts": [
+            {
+                "relation": "guardian",
+                "title": "Mrs.",
+                "firstname": "Amanda",
+                "lastname": "Haling",
+                "contact_name": "Mrs. Haling, Amanda (Guardian)",
+                "contact_email": "amandahaling1993@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27gomez@district41.org"
+    },
+    {
+        "firstname": "Daniel",
+        "lastname": "Selea",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Cristina",
+                "lastname": "Pirvulescu",
+                "contact_name": "Mrs. Pirvulescu, Cristina (Mother)",
+                "contact_email": "cris929@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Florin",
+                "lastname": "Selea",
+                "contact_name": "Mr. Selea, Florin (Father)",
+                "contact_email": "cris929@yahoo.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27selea@district41.org"
+    },
+    {
+        "firstname": "Georgina",
+        "lastname": "Rosales",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Roxanne Marie",
+                "lastname": "Rosales",
+                "contact_name": "Ms. Rosales, Roxanne Marie (Mother)",
+                "contact_email": "bermr25@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Jorge F",
+                "lastname": "Rosales",
+                "contact_name": "Mr. Rosales, Jorge F (Father)",
+                "contact_email": "rrjorgerosales.18@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27rosales@district41.org"
+    },
+    {
+        "firstname": "Harper",
+        "lastname": "Dorsey",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Joanna",
+                "lastname": "Dorsey",
+                "contact_name": "Mrs. Dorsey, Joanna (Mother)",
+                "contact_email": "joanna.dorsey27@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Mitchell",
+                "lastname": "Dorsey",
+                "contact_name": "Mr. Dorsey, Mitchell (Father)",
+                "contact_email": "mitchell.dorsey87@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27dorsey@district41.org"
+    },
+    {
+        "firstname": "Ian",
+        "lastname": "Koutsoures",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Lyndsey Beth",
+                "lastname": "Koutsoures",
+                "contact_name": "Mrs. Koutsoures, Lyndsey Beth (Mother)",
+                "contact_email": "lbkoutsoures@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Bryen James",
+                "lastname": "Koutsoures",
+                "contact_name": "Mr. Koutsoures, Bryen James (Father)",
+                "contact_email": "bryenkoutsoures@att.net"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27koutsoures@district41.org"
+    },
+    {
+        "firstname": "Kennedy",
+        "lastname": "Clearwater-Clark",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Cassandra",
+                "lastname": "Clarke",
+                "contact_name": "Ms. Clarke, Cassandra (Mother)",
+                "contact_email": "cass.clarke01@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": null
+    },
+    {
+        "firstname": "Koda",
+        "lastname": "Custer",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Nicole",
+                "lastname": "Weissmann",
+                "contact_name": "Mrs. Weissmann, Nicole (Mother)",
+                "contact_email": "nikkiaschutte@gmail.com"
+            },
+            {
+                "relation": "stepfather",
+                "title": "Mr.",
+                "firstname": "Dylan",
+                "lastname": "Weissmann",
+                "contact_name": "Mr. Weissmann, Dylan (Stepfather)",
+                "contact_email": "dylan.weissmann@yahoo.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27custer@district41.org"
+    },
+    {
+        "firstname": "Lukas",
+        "lastname": "Hoang",
+        "contacts": [
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Viet",
+                "lastname": "Hoang",
+                "contact_name": "Mr. Hoang, Viet (Father)",
+                "contact_email": "beautiful.nails.il@gmail.com"
+            },
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Huyen",
+                "lastname": "Nguyen",
+                "contact_name": "Mrs. Nguyen, Huyen (Mother)",
+                "contact_email": "beautiful.nails.il@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27hoang@district41.org"
+    },
+    {
+        "firstname": "Makayla",
+        "lastname": "West",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "West",
+                "firstname": "Jessica L",
+                "lastname": "",
+                "contact_name": "West, Jessica L (Mother)",
+                "contact_email": "west.jessica85@yahoo.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27west@district41.org"
+    },
+    {
+        "firstname": "Naiara",
+        "lastname": "Cabrero",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Mirta",
+                "lastname": "Cintron",
+                "contact_name": "Mrs. Cintron, Mirta (Mother)",
+                "contact_email": "sharlinecm@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Javier",
+                "lastname": "Cabrero",
+                "contact_name": "Mr. Cabrero, Javier (Father)",
+                "contact_email": "cabrerolaw@aol.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27cabrero@district41.org"
+    },
+    {
+        "firstname": "Nathalie",
+        "lastname": "Olson",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Mrs.",
+                "firstname": "Nanci Carol",
+                "lastname": "Olson",
+                "contact_name": "Mrs. Olson, Nanci Carol (Mother)",
+                "contact_email": "nanci1324@gmail.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "John Gary",
+                "lastname": "Olson",
+                "contact_name": "Mr. Olson, John Gary (Father)",
+                "contact_email": "johnmolson1@hotmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27olson@district41.org"
+    },
+    {
+        "firstname": "Nizeah",
+        "lastname": "Evans",
+        "contacts": [
+            {
+                "relation": "guardian",
+                "title": "Mr.",
+                "firstname": "Larry Sr.",
+                "lastname": "Barnwell",
+                "contact_name": "Mr. Barnwell, Larry Sr. (Guardian)",
+                "contact_email": "angler5336@gmail.com"
+            },
+            {
+                "relation": "guardian",
+                "title": "Mrs.",
+                "firstname": "Chantele",
+                "lastname": "Beads-Barnwell",
+                "contact_name": "Mrs. Beads-Barnwell, Chantele (Guardian)",
+                "contact_email": "beadscc@aol.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27evans@district41.org"
+    },
+    {
+        "firstname": "Sarai",
+        "lastname": "Balderas",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Perla Magaly",
+                "lastname": "Balderas",
+                "contact_name": "Ms. Balderas, Perla Magaly (Mother)",
+                "contact_email": "magalyblds@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27balderas@district41.org"
+    },
+    {
+        "firstname": "Savannah",
+        "lastname": "Vega",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Ms.",
+                "firstname": "Elizabeth",
+                "lastname": "Vega",
+                "contact_name": "Ms. Vega, Elizabeth (Mother)",
+                "contact_email": "giggles5dreamer@yahoo.com"
+            },
+            {
+                "relation": "father",
+                "title": "Mr.",
+                "firstname": "Alex",
+                "lastname": "Vega",
+                "contact_name": "Mr. Vega, Alex (Father)",
+                "contact_email": "avega8781@yahoo.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27vega@district41.org"
+    },
+    {
+        "firstname": "Zachariah",
+        "lastname": "Punter",
+        "contacts": [
+            {
+                "relation": "mother",
+                "title": "Jacobs",
+                "firstname": "Stephanie",
+                "lastname": "",
+                "contact_name": "Jacobs, Stephanie (Mother)",
+                "contact_email": "smiles0413@gmail.com"
+            }
+        ],
+        "course": "9-10(A) Math (7)",
+        "email": "27punter@district41.org"
+    }
+]
