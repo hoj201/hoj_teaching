@@ -5,6 +5,11 @@ with open("./fixtures/studentEmails.txt", "r") as f:
     doc = f.read()
 
 student_email_addresses = [x.strip() for x in doc.split(";")]
+name2gender = {}
+with open("./fixtures/studentGender.csv", "r") as f:
+    reader = DictReader(f, fieldnames=["Name", "Gender"])
+    for row in reader:
+        name2gender[row["Name"].lower()] = row["Gender"]
 
 students = []
 with open("./fixtures/parentEmails.csv", "r") as f:
@@ -16,7 +21,8 @@ with open("./fixtures/parentEmails.csv", "r") as f:
                 "firstname": firstname.strip().replace('"', ''),
                 "lastname": lastname.strip().replace('"', ''),
                 "contacts": [],
-                "course": row["Course"]
+                "course": row["Course"],
+                "gender": name2gender.get(row["Name"].lower(), None)
             }
             students.append(student)
         else:

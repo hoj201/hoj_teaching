@@ -39,3 +39,7 @@ Desired Features:
     ]
 }
  ```
+
+
+ ## Notes
+ The file `students.json` is generated from `process_email_files.py`.  However, there are a few errors (check Alina's record + records for students with the same last name + for null genders)
