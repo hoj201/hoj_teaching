@@ -1,6 +1,6 @@
 from csv import DictReader
 import re
-
+#raise Exception("I do not want this script to be run accidentally")
 with open("./fixtures/studentEmails.txt", "r") as f:
     doc = f.read()
 
@@ -16,7 +16,11 @@ with open("./fixtures/parentEmails.csv", "r") as f:
     reader = DictReader(f, fieldnames=["Name", "Contact Name", "Contact Email", "Course"], quotechar='"', delimiter=";")
     for row in reader:
         if row["Name"] != "":
-            lastname, firstname = row["Name"].split(",")
+            try:
+                lastname, firstname = row["Name"].split(",")
+            except ValueError:
+                print("Could not parse name:", row["Name"])
+                continue
             student = {
                 "firstname": firstname.strip().replace('"', ''),
                 "lastname": lastname.strip().replace('"', ''),
@@ -27,9 +31,10 @@ with open("./fixtures/parentEmails.csv", "r") as f:
             students.append(student)
         else:
             lastname = re.search(r"([^,]+),", row["Contact Name"]).group(1).strip()
-            title = re.search(r"^([^\s]+)", lastname).group(1)
+            title = re.search(r"^([^\s]+)\.", lastname)
             if title is not None:
-                lastname = lastname.removeprefix(title).strip() 
+                title = title.group(1)
+                lastname = lastname.removeprefix(title).strip().removeprefix(".").strip()
             contact = {
                 "relation" : re.search(r"\(([^)]*)\)", row["Contact Name"]).group(1).lower(),
                 "title": title,

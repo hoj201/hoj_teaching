@@ -5,7 +5,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Yosmaira",
                 "lastname": "Ochoa",
                 "contact_name": "Mrs. Ochoa, Yosmaira (Mother)",
@@ -13,7 +13,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Gabriel",
                 "lastname": "Ochoa",
                 "contact_name": "Mr. Ochoa, Gabriel (Father)",
@@ -30,7 +30,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Griselda",
                 "lastname": "Solis",
                 "contact_name": "Ms. Solis, Griselda (Mother)",
@@ -47,7 +47,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Rosario",
                 "lastname": "Castillo",
                 "contact_name": "Mrs. Castillo, Rosario (Mother)",
@@ -55,7 +55,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Anthony",
                 "lastname": "Palacios",
                 "contact_name": "Mr. Palacios, Anthony (Father)",
@@ -72,7 +72,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Niochtka N.",
                 "lastname": "Salinas",
                 "contact_name": "Mrs. Salinas, Niochtka N. (Mother)",
@@ -80,7 +80,7 @@
             },
             {
                 "relation": "stepfather",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Juan",
                 "lastname": "Salinas",
                 "contact_name": "Mr. Salinas, Juan (Stepfather)",
@@ -97,7 +97,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Sandra",
                 "lastname": "Andrews",
                 "contact_name": "Mrs. Andrews, Sandra (Mother)",
@@ -105,7 +105,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Brian",
                 "lastname": "Andrews",
                 "contact_name": "Mr. Andrews, Brian (Father)",
@@ -122,7 +122,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Diana",
                 "lastname": "Santiago",
                 "contact_name": "Mrs. Santiago, Diana (Mother)",
@@ -139,7 +139,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Adriana",
                 "lastname": "Cruz-Tapia",
                 "contact_name": "Ms. Cruz-Tapia, Adriana (Mother)",
@@ -156,7 +156,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Elizabeth Alice",
                 "lastname": "Fagan",
                 "contact_name": "Ms. Fagan, Elizabeth Alice (Mother)",
@@ -173,7 +173,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Katie",
                 "lastname": "Hall",
                 "contact_name": "Ms. Hall, Katie (Mother)",
@@ -181,7 +181,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Charles",
                 "lastname": "Hall",
                 "contact_name": "Mr. Hall, Charles (Father)",
@@ -198,7 +198,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Alessa",
                 "lastname": "Pasternak",
                 "contact_name": "Mrs. Pasternak, Alessa (Mother)",
@@ -206,7 +206,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Matthew",
                 "lastname": "Pasternak",
                 "contact_name": "Mr. Pasternak, Matthew (Father)",
@@ -223,7 +223,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Saul",
                 "lastname": "Sosa",
                 "contact_name": "Mr. Sosa, Saul (Father)",
@@ -231,7 +231,7 @@
             },
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Katherine",
                 "lastname": "Kasper",
                 "contact_name": "Mrs. Kasper, Katherine (Mother)",
@@ -248,7 +248,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Elizabeth",
                 "lastname": "Arteaga",
                 "contact_name": "Mrs. Arteaga, Elizabeth (Mother)",
@@ -256,7 +256,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Francisco Emmanuel",
                 "lastname": "Morales",
                 "contact_name": "Mr. Morales, Francisco Emmanuel (Father)",
@@ -273,7 +273,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Karina",
                 "lastname": "Gonzalez",
                 "contact_name": "Mrs. Gonzalez, Karina (Mother)",
@@ -281,7 +281,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Alberto",
                 "lastname": "Chacon",
                 "contact_name": "Mr. Chacon, Alberto (Father)",
@@ -298,23 +298,23 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Aguilar",
+                "title": null,
                 "firstname": "Alexander",
-                "lastname": "",
+                "lastname": "Aguilar",
                 "contact_name": "Aguilar, Alexander (Father)",
                 "contact_email": "alexss76@outlook.com"
             },
             {
                 "relation": "mother",
-                "title": "Fabian",
+                "title": null,
                 "firstname": "Alba",
-                "lastname": "",
+                "lastname": "Fabian",
                 "contact_name": "Fabian, Alba (Mother)",
                 "contact_email": "albita50@yahoo.com"
             }
         ],
         "course": "1-2(A) Math (7)",
-        "gender": "F",
+        "gender": null,
         "email": "27aguilar@district41.org"
     },
     {
@@ -323,7 +323,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Lauryn",
                 "lastname": "Seger",
                 "contact_name": "Mrs. Seger, Lauryn (Mother)",
@@ -331,7 +331,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Jeremy",
                 "lastname": "Seger",
                 "contact_name": "Mr. Seger, Jeremy (Father)",
@@ -348,7 +348,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Gerard Leron II",
                 "lastname": "Mcgregor",
                 "contact_name": "Mr. Mcgregor, Gerard Leron II (Father)",
@@ -365,7 +365,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Joanna",
                 "lastname": "Dorsey",
                 "contact_name": "Mrs. Dorsey, Joanna (Mother)",
@@ -373,7 +373,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Mitchell",
                 "lastname": "Dorsey",
                 "contact_name": "Mr. Dorsey, Mitchell (Father)",
@@ -390,7 +390,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Ashlee",
                 "lastname": "Baxter",
                 "contact_name": "Mrs. Baxter, Ashlee (Mother)",
@@ -398,7 +398,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Allen",
                 "lastname": "Baxter",
                 "contact_name": "Mr. Baxter, Allen (Father)",
@@ -415,7 +415,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Afolake Omolara",
                 "lastname": "Akanbi",
                 "contact_name": "Ms. Akanbi, Afolake Omolara (Mother)",
@@ -432,7 +432,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Kimberly",
                 "lastname": "Masura",
                 "contact_name": "Ms. Masura, Kimberly (Mother)",
@@ -440,7 +440,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Ryan",
                 "lastname": "Masura",
                 "contact_name": "Mr. Masura, Ryan (Father)",
@@ -457,7 +457,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Roiann",
                 "lastname": "Howard",
                 "contact_name": "Mrs. Howard, Roiann (Mother)",
@@ -465,7 +465,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Christopher",
                 "lastname": "Howard",
                 "contact_name": "Mr. Howard, Christopher (Father)",
@@ -482,15 +482,15 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Neave",
+                "title": null,
                 "firstname": "Rosa",
-                "lastname": "",
+                "lastname": "Neave",
                 "contact_name": "Neave, Rosa (Mother)",
                 "contact_email": "zac05.fc@gmail.com"
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Fernando",
                 "lastname": "Chairez",
                 "contact_name": "Mr. Chairez, Fernando (Father)",
@@ -507,7 +507,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Kevin",
                 "lastname": "Wysocki",
                 "contact_name": "Mr. Wysocki, Kevin (Father)",
@@ -515,7 +515,7 @@
             },
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Ruo",
                 "lastname": "Wysocki",
                 "contact_name": "Mrs. Wysocki, Ruo (Mother)",
@@ -532,7 +532,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Sabrina II",
                 "lastname": "Kitzerow",
                 "contact_name": "Mrs. Kitzerow, Sabrina II (Mother)",
@@ -540,7 +540,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Brian",
                 "lastname": "Kitzerow",
                 "contact_name": "Mr. Kitzerow, Brian (Father)",
@@ -557,17 +557,17 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mccormick",
+                "title": null,
                 "firstname": "Karen M",
-                "lastname": "",
+                "lastname": "Mccormick",
                 "contact_name": "Mccormick, Karen M (Mother)",
                 "contact_email": "erijamanna75@gmail.com"
             },
             {
                 "relation": "father",
-                "title": "Robaczewski",
+                "title": null,
                 "firstname": "David J",
-                "lastname": "",
+                "lastname": "Robaczewski",
                 "contact_name": "Robaczewski, David J (Father)",
                 "contact_email": "davejr967@gmail.com"
             }
@@ -582,9 +582,9 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Macias",
+                "title": null,
                 "firstname": "Nancy",
-                "lastname": "",
+                "lastname": "Macias",
                 "contact_name": "Macias, Nancy (Mother)",
                 "contact_email": "nancy_mcs@yahoo.com"
             }
@@ -599,7 +599,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Christine Marie",
                 "lastname": "Horton",
                 "contact_name": "Mrs. Horton, Christine Marie (Mother)",
@@ -607,7 +607,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Ryan Gerald",
                 "lastname": "Horton",
                 "contact_name": "Mr. Horton, Ryan Gerald (Father)",
@@ -624,7 +624,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Cassie Lee",
                 "lastname": "Cummings",
                 "contact_name": "Ms. Cummings, Cassie Lee (Mother)",
@@ -641,7 +641,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Wanda",
                 "lastname": "Trejo",
                 "contact_name": "Ms. Trejo, Wanda (Mother)",
@@ -658,7 +658,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Kathy",
                 "lastname": "Obrien",
                 "contact_name": "Mrs. Obrien, Kathy (Mother)",
@@ -666,7 +666,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Alan",
                 "lastname": "Obrien",
                 "contact_name": "Mr. Obrien, Alan (Father)",
@@ -683,7 +683,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Gabriella",
                 "lastname": "Nava",
                 "contact_name": "Ms. Nava, Gabriella (Mother)",
@@ -691,9 +691,9 @@
             },
             {
                 "relation": "stepfather",
-                "title": "Estrada",
+                "title": null,
                 "firstname": "Javier",
-                "lastname": "",
+                "lastname": "Estrada",
                 "contact_name": "Estrada, Javier (Stepfather)",
                 "contact_email": "gabynava743@gmail.com"
             }
@@ -708,7 +708,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Sandra Nolia",
                 "lastname": "Rocha",
                 "contact_name": "Mrs. Rocha, Sandra Nolia (Mother)",
@@ -716,7 +716,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Enrique",
                 "lastname": "Martinez Lara",
                 "contact_name": "Mr. Martinez Lara, Enrique (Father)",
@@ -724,7 +724,7 @@
             },
             {
                 "relation": "sister",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Zitlali",
                 "lastname": "Martinez",
                 "contact_name": "Ms. Martinez, Zitlali (Sister)",
@@ -741,7 +741,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Brenda",
                 "lastname": "Salinas",
                 "contact_name": "Mrs. Salinas, Brenda (Mother)",
@@ -749,7 +749,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Estevan",
                 "lastname": "Salinas",
                 "contact_name": "Mr. Salinas, Estevan (Father)",
@@ -766,7 +766,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Gregorio",
                 "lastname": "Roman Torres",
                 "contact_name": "Mr. Roman Torres, Gregorio (Father)",
@@ -783,7 +783,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Viktoriia V",
                 "lastname": "Martin",
                 "contact_name": "Mrs. Martin, Viktoriia V (Mother)",
@@ -791,7 +791,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Brent Elliot",
                 "lastname": "Martin",
                 "contact_name": "Mr. Martin, Brent Elliot (Father)",
@@ -808,7 +808,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Julie",
                 "lastname": "Nickles",
                 "contact_name": "Mrs. Nickles, Julie (Mother)",
@@ -816,7 +816,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Scott",
                 "lastname": "Nickles",
                 "contact_name": "Mr. Nickles, Scott (Father)",
@@ -833,17 +833,17 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Silverman",
+                "title": null,
                 "firstname": "Erin",
-                "lastname": "",
+                "lastname": "Silverman",
                 "contact_name": "Silverman, Erin (Mother)",
                 "contact_email": "erin.silverman.3@alight.com"
             },
             {
                 "relation": "father",
-                "title": "Silverman",
+                "title": null,
                 "firstname": "Rob",
-                "lastname": "",
+                "lastname": "Silverman",
                 "contact_name": "Silverman, Rob (Father)",
                 "contact_email": "rtsilver42@gmail.com"
             }
@@ -858,17 +858,17 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Donohue",
+                "title": null,
                 "firstname": "Jennifer",
-                "lastname": "",
+                "lastname": "Donohue",
                 "contact_name": "Donohue, Jennifer (Mother)",
                 "contact_email": "jvdonohue82@yahoo.com"
             },
             {
                 "relation": "father",
-                "title": "Donohue",
+                "title": null,
                 "firstname": "Gene",
-                "lastname": "",
+                "lastname": "Donohue",
                 "contact_name": "Donohue, Gene (Father)",
                 "contact_email": "gdonohue77@yahoo.com"
             }
@@ -883,7 +883,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Bridget Nicole",
                 "lastname": "Marco",
                 "contact_name": "Ms. Marco, Bridget Nicole (Mother)",
@@ -900,7 +900,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Erin",
                 "lastname": "Baumgardner",
                 "contact_name": "Ms. Baumgardner, Erin (Mother)",
@@ -908,9 +908,9 @@
             },
             {
                 "relation": "father",
-                "title": "Baumgardner",
+                "title": null,
                 "firstname": "Brent",
-                "lastname": "",
+                "lastname": "Baumgardner",
                 "contact_name": "Baumgardner, Brent (Father)",
                 "contact_email": "baum.parents@gmail.com"
             }
@@ -925,17 +925,17 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Tellez",
+                "title": null,
                 "firstname": "Adan",
-                "lastname": "",
+                "lastname": "Tellez",
                 "contact_name": "Tellez, Adan (Father)",
                 "contact_email": "adantellez499@gmail.com"
             },
             {
                 "relation": "mother",
-                "title": "Velazquez",
+                "title": null,
                 "firstname": "Cecilia",
-                "lastname": "Tovar",
+                "lastname": "Velazquez Tovar",
                 "contact_name": "Velazquez Tovar, Cecilia (Mother)",
                 "contact_email": "adantellez499@gmail.com"
             }
@@ -950,7 +950,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Norma A",
                 "lastname": "Gomez",
                 "contact_name": "Ms. Gomez, Norma A (Mother)",
@@ -958,7 +958,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Ramiro",
                 "lastname": "Gomez",
                 "contact_name": "Mr. Gomez, Ramiro (Father)",
@@ -975,7 +975,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Vanessa",
                 "lastname": "Bahena",
                 "contact_name": "Ms. Bahena, Vanessa (Mother)",
@@ -992,7 +992,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Nereyda",
                 "lastname": "Garcia Custodia",
                 "contact_name": "Mrs. Garcia Custodia, Nereyda (Mother)",
@@ -1000,7 +1000,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Agripino",
                 "lastname": "Santana Macedo",
                 "contact_name": "Mr. Santana Macedo, Agripino (Father)",
@@ -1017,7 +1017,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Diana",
                 "lastname": "Robles-Reyes",
                 "contact_name": "Mrs. Robles-Reyes, Diana (Mother)",
@@ -1025,7 +1025,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Jose M",
                 "lastname": "Reyes",
                 "contact_name": "Mr. Reyes, Jose M (Father)",
@@ -1042,7 +1042,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Brenda",
                 "lastname": "Manjarrez-Rodriguez",
                 "contact_name": "Ms. Manjarrez-Rodriguez, Brenda (Mother)",
@@ -1050,9 +1050,9 @@
             },
             {
                 "relation": "father",
-                "title": "Hernandez",
+                "title": null,
                 "firstname": "Ricardo",
-                "lastname": "",
+                "lastname": "Hernandez",
                 "contact_name": "Hernandez, Ricardo (Father)",
                 "contact_email": "--"
             }
@@ -1067,7 +1067,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Amanda Marie",
                 "lastname": "Raatz",
                 "contact_name": "Mrs. Raatz, Amanda Marie (Mother)",
@@ -1084,7 +1084,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Aviel",
                 "lastname": "Avelar",
                 "contact_name": "Mr. Avelar, Aviel (Father)",
@@ -1092,7 +1092,7 @@
             },
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Tiffany Lynn",
                 "lastname": "Avelar",
                 "contact_name": "Mrs. Avelar, Tiffany Lynn (Mother)",
@@ -1109,17 +1109,17 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Herrera",
+                "title": null,
                 "firstname": "Cristina Ana",
-                "lastname": "",
+                "lastname": "Herrera",
                 "contact_name": "Herrera, Cristina Ana (Mother)",
                 "contact_email": "cristina.herrera99@yahoo.com"
             },
             {
                 "relation": "father",
-                "title": "Avila",
+                "title": null,
                 "firstname": "Miguel Angel",
-                "lastname": "",
+                "lastname": "Avila",
                 "contact_name": "Avila, Miguel Angel (Father)",
                 "contact_email": "avilamiguel978@gmail.com"
             }
@@ -1134,7 +1134,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Mikayla Cassandra",
                 "lastname": "Richford",
                 "contact_name": "Ms. Richford, Mikayla Cassandra (Mother)",
@@ -1151,7 +1151,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Maria Guadalupe",
                 "lastname": "Carrasco",
                 "contact_name": "Ms. Carrasco, Maria Guadalupe (Mother)",
@@ -1159,9 +1159,9 @@
             },
             {
                 "relation": "father",
-                "title": "Robledo",
+                "title": null,
                 "firstname": "Ricardo",
-                "lastname": "",
+                "lastname": "Robledo",
                 "contact_name": "Robledo, Ricardo (Father)",
                 "contact_email": "doricky2000@yahoo.com"
             }
@@ -1176,7 +1176,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Maria Isabel",
                 "lastname": "Hernandez Gomez",
                 "contact_name": "Mrs. Hernandez Gomez, Maria Isabel (Mother)",
@@ -1184,7 +1184,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Marcos Sr.",
                 "lastname": "Antonio Reyes",
                 "contact_name": "Mr. Antonio Reyes, Marcos Sr. (Father)",
@@ -1201,7 +1201,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Holli",
                 "lastname": "Craft",
                 "contact_name": "Mrs. Craft, Holli (Mother)",
@@ -1209,7 +1209,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Jeremy",
                 "lastname": "Craft",
                 "contact_name": "Mr. Craft, Jeremy (Father)",
@@ -1226,7 +1226,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Vianey",
                 "lastname": "Garcia",
                 "contact_name": "Mrs. Garcia, Vianey (Mother)",
@@ -1234,7 +1234,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Rene",
                 "lastname": "Garcia",
                 "contact_name": "Mr. Garcia, Rene (Father)",
@@ -1251,7 +1251,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Jasmine",
                 "lastname": "Vargas",
                 "contact_name": "Ms. Vargas, Jasmine (Mother)",
@@ -1259,7 +1259,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Julian",
                 "lastname": "Hernandez",
                 "contact_name": "Mr. Hernandez, Julian (Father)",
@@ -1276,7 +1276,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Ana Dayma",
                 "lastname": "Figueras",
                 "contact_name": "Mrs. Figueras, Ana Dayma (Mother)",
@@ -1284,7 +1284,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Henry",
                 "lastname": "Figueras",
                 "contact_name": "Mr. Figueras, Henry (Father)",
@@ -1301,24 +1301,24 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Leanos",
+                "title": null,
                 "firstname": "Sendi",
-                "lastname": "",
+                "lastname": "Leanos",
                 "contact_name": "Leanos, Sendi (Mother)",
                 "contact_email": "saldanacarlos136@gmail.com"
             },
             {
                 "relation": "father",
-                "title": "Saldana",
+                "title": null,
                 "firstname": "Carlos Cirilo",
-                "lastname": "",
+                "lastname": "Saldana",
                 "contact_name": "Saldana, Carlos Cirilo (Father)",
                 "contact_email": "saldanacarlos136@gmail.com"
             }
         ],
         "course": "7-8(A) Math (7)",
         "gender": "F",
-        "email": "27saldanaleanos@district41.org"
+        "email": null
     },
     {
         "firstname": "Vera",
@@ -1326,7 +1326,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Jennifer",
                 "lastname": "Huse",
                 "contact_name": "Mrs. Huse, Jennifer (Mother)",
@@ -1334,7 +1334,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Edward",
                 "lastname": "Huse",
                 "contact_name": "Mr. Huse, Edward (Father)",
@@ -1351,7 +1351,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Beata",
                 "lastname": "Dyczewski",
                 "contact_name": "Ms. Dyczewski, Beata (Mother)",
@@ -1368,7 +1368,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Ashley Patrice",
                 "lastname": "Edmonson",
                 "contact_name": "Ms. Edmonson, Ashley Patrice (Mother)",
@@ -1385,7 +1385,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Amanda",
                 "lastname": "Sparkman",
                 "contact_name": "Mrs. Sparkman, Amanda (Mother)",
@@ -1393,7 +1393,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Kevin",
                 "lastname": "Sparkman",
                 "contact_name": "Mr. Sparkman, Kevin (Father)",
@@ -1410,7 +1410,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Lisa L",
                 "lastname": "Magana",
                 "contact_name": "Ms. Magana, Lisa L (Mother)",
@@ -1418,7 +1418,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Francisco",
                 "lastname": "Uriostegui",
                 "contact_name": "Mr. Uriostegui, Francisco (Father)",
@@ -1435,7 +1435,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Mallory Suzanne",
                 "lastname": "Lang",
                 "contact_name": "Mrs. Lang, Mallory Suzanne (Mother)",
@@ -1443,7 +1443,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Dov Louis",
                 "lastname": "Lang",
                 "contact_name": "Mr. Lang, Dov Louis (Father)",
@@ -1460,7 +1460,7 @@
         "contacts": [
             {
                 "relation": "guardian",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Amanda",
                 "lastname": "Haling",
                 "contact_name": "Mrs. Haling, Amanda (Guardian)",
@@ -1477,7 +1477,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Cristina",
                 "lastname": "Pirvulescu",
                 "contact_name": "Mrs. Pirvulescu, Cristina (Mother)",
@@ -1485,7 +1485,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Florin",
                 "lastname": "Selea",
                 "contact_name": "Mr. Selea, Florin (Father)",
@@ -1502,7 +1502,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Roxanne Marie",
                 "lastname": "Rosales",
                 "contact_name": "Ms. Rosales, Roxanne Marie (Mother)",
@@ -1510,7 +1510,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Jorge F",
                 "lastname": "Rosales",
                 "contact_name": "Mr. Rosales, Jorge F (Father)",
@@ -1527,7 +1527,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Joanna",
                 "lastname": "Dorsey",
                 "contact_name": "Mrs. Dorsey, Joanna (Mother)",
@@ -1535,7 +1535,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Mitchell",
                 "lastname": "Dorsey",
                 "contact_name": "Mr. Dorsey, Mitchell (Father)",
@@ -1552,7 +1552,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Lyndsey Beth",
                 "lastname": "Koutsoures",
                 "contact_name": "Mrs. Koutsoures, Lyndsey Beth (Mother)",
@@ -1560,7 +1560,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Bryen James",
                 "lastname": "Koutsoures",
                 "contact_name": "Mr. Koutsoures, Bryen James (Father)",
@@ -1577,7 +1577,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Cassandra",
                 "lastname": "Clarke",
                 "contact_name": "Ms. Clarke, Cassandra (Mother)",
@@ -1594,7 +1594,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Nicole",
                 "lastname": "Weissmann",
                 "contact_name": "Mrs. Weissmann, Nicole (Mother)",
@@ -1602,7 +1602,7 @@
             },
             {
                 "relation": "stepfather",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Dylan",
                 "lastname": "Weissmann",
                 "contact_name": "Mr. Weissmann, Dylan (Stepfather)",
@@ -1619,7 +1619,7 @@
         "contacts": [
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Viet",
                 "lastname": "Hoang",
                 "contact_name": "Mr. Hoang, Viet (Father)",
@@ -1627,7 +1627,7 @@
             },
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Huyen",
                 "lastname": "Nguyen",
                 "contact_name": "Mrs. Nguyen, Huyen (Mother)",
@@ -1644,9 +1644,9 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "West",
+                "title": null,
                 "firstname": "Jessica L",
-                "lastname": "",
+                "lastname": "West",
                 "contact_name": "West, Jessica L (Mother)",
                 "contact_email": "west.jessica85@yahoo.com"
             }
@@ -1661,7 +1661,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Mirta",
                 "lastname": "Cintron",
                 "contact_name": "Mrs. Cintron, Mirta (Mother)",
@@ -1669,7 +1669,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Javier",
                 "lastname": "Cabrero",
                 "contact_name": "Mr. Cabrero, Javier (Father)",
@@ -1686,7 +1686,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Nanci Carol",
                 "lastname": "Olson",
                 "contact_name": "Mrs. Olson, Nanci Carol (Mother)",
@@ -1694,7 +1694,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "John Gary",
                 "lastname": "Olson",
                 "contact_name": "Mr. Olson, John Gary (Father)",
@@ -1711,7 +1711,7 @@
         "contacts": [
             {
                 "relation": "guardian",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Larry Sr.",
                 "lastname": "Barnwell",
                 "contact_name": "Mr. Barnwell, Larry Sr. (Guardian)",
@@ -1719,7 +1719,7 @@
             },
             {
                 "relation": "guardian",
-                "title": "Mrs.",
+                "title": "Mrs",
                 "firstname": "Chantele",
                 "lastname": "Beads-Barnwell",
                 "contact_name": "Mrs. Beads-Barnwell, Chantele (Guardian)",
@@ -1736,7 +1736,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Perla Magaly",
                 "lastname": "Balderas",
                 "contact_name": "Ms. Balderas, Perla Magaly (Mother)",
@@ -1753,7 +1753,7 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Ms.",
+                "title": "Ms",
                 "firstname": "Elizabeth",
                 "lastname": "Vega",
                 "contact_name": "Ms. Vega, Elizabeth (Mother)",
@@ -1761,7 +1761,7 @@
             },
             {
                 "relation": "father",
-                "title": "Mr.",
+                "title": "Mr",
                 "firstname": "Alex",
                 "lastname": "Vega",
                 "contact_name": "Mr. Vega, Alex (Father)",
@@ -1778,9 +1778,9 @@
         "contacts": [
             {
                 "relation": "mother",
-                "title": "Jacobs",
+                "title": null,
                 "firstname": "Stephanie",
-                "lastname": "",
+                "lastname": "Jacobs",
                 "contact_name": "Jacobs, Stephanie (Mother)",
                 "contact_email": "smiles0413@gmail.com"
             }
