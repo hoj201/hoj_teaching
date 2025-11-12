@@ -1,5 +1,11 @@
 import streamlit as st
 import json
+from utility import check_password
+
+# Do not continue if check_password is not True.  
+if not check_password():
+    st.stop()
+
 
 def get_contact_title(contact):
     if contact["title"] is None:
