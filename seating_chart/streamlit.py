@@ -5,6 +5,10 @@ import json
 import logging
 import os
 
+logger = st.logger.get_logger(__name__)
+logger.setLevel(logging.INFO)
+logger.info('Streamlit app started')
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 periods = [
     "period_12",
@@ -38,23 +42,20 @@ try:
 except Exception as e:
     st.error(e)
 
-st.header("Max Table Size")
-max_table_size = st.text_input("max_table_size", value="3", max_chars=2)
-try:
-    max_table_size = int(max_table_size)
-except ValueError as error:
-    st.error(error)
-
 
 exam_mode = st.toggle("exam_mode", value=False, help="Arranges students into individual desks")
 if exam_mode:
     max_table_size=1
 
 if st.button("Generate slides"):
+    logger.info("Generating slides")
+    logger.info(f"Selected periods: {selected_periods}") 
+    logger.info(f"Exam mode: {exam_mode}")  
+    logger.info(f"Content: {content_string}")
     if len([x for x in os.listdir('.') if x.endswith('.svg')]) >= 4:
-        logging.info("removing old svg files")
+        logger.info("removing old svg files")
         [os.remove(x) for x in os.listdir('.') if x.endswith('.svg')]
-    tables_by_period, slide_filenames = generate(selected_periods, content, max_table_size, exam_mode)
+    tables_by_period, slide_filenames = generate(selected_periods, content, exam_mode)
     for fn in slide_filenames:
         st.image(fn)
     st.json(tables_by_period)

@@ -5,6 +5,9 @@ from typing import Dict, List
 from collections import defaultdict
 from pathlib import Path
 from dataclasses import dataclass
+import logging
+
+logger = logging.getLogger(__name__)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -14,6 +17,7 @@ class Content():
     do_now: dict
     announcements: dict
     seeds: dict
+    max_table_size: dict
 
     @classmethod
     def from_dict(cls, d: dict):
@@ -21,7 +25,8 @@ class Content():
         do_now = cls.to_default_dict(d["do_now"])
         announcements = cls.to_default_dict(d["announcements"])
         seeds = d["seeds"]
-        return cls(agenda, do_now, announcements, seeds)
+        max_table_size = cls.to_default_dict(d["max_table_size"])
+        return cls(agenda, do_now, announcements, seeds, max_table_size)
 
     @staticmethod
     def to_default_dict(d: Dict):
@@ -50,7 +55,7 @@ def load_roster(period) -> List[Student]:
                 )
     return students
 
-def generate(periods: List[str], content: Content, max_table_size:int, exam_mode:bool):
+def generate(periods: List[str], content: Content, exam_mode:bool):
     agenda = content.agenda
     announcements = content.announcements
     do_now = content.do_now
@@ -60,6 +65,7 @@ def generate(periods: List[str], content: Content, max_table_size:int, exam_mode
     for period in periods:
         seed = seeds[period]
         students = load_roster(period)
+        max_table_size = content.max_table_size[period]
         tables = make_tables(students, max_table_size=max_table_size, seed=seed)
         svg = make_slides(
             tables, 
@@ -74,7 +80,7 @@ def generate(periods: List[str], content: Content, max_table_size:int, exam_mode
         filename = f'welcome_slide_{seed}_{period}.svg'
         with open(filename, 'w') as f:
             f.write(xml_string)
-            print(f"File '{f.name}' has been created.")
+            logger.info(f"File '{f.name}' has been created.")
         slide_filenames.append(filename)
         tables_json = {f"Table_{k+1}":[x.name for x in tables[k]] for k in range(len(tables))}
         tables_by_period[period] = tables_json
