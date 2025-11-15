@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "composite-shapes-activity"
+version = "0.1.0"
+description = ""
+authors = ["hoj201 <hoj201@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+streamlit = "^1.51.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
