@@ -1,5 +1,5 @@
 import streamlit as st
-from hoj_slides import generate, Content
+from hoj_slides import generate, Content, PERIODS
 from pathlib import Path
 import json
 import logging
@@ -10,17 +10,12 @@ logger.setLevel(logging.INFO)
 logger.info('Streamlit app started')
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-periods = [
-    "period_12",
-    "period_45",
-    "period_78",
-    "period_910"
-]
+
 
 st.title("Seating Chart Slide Generator")
 
 st.header("Which blocks")
-selected_periods = st.multiselect("Blocks", options=periods)
+selected_periods = st.multiselect("Blocks", options=PERIODS, default=PERIODS)
 
 
 st.header("Content")
