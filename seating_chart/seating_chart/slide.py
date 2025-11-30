@@ -11,9 +11,10 @@ HEADER_SIZE = "54"
 FONT_SIZE = "44"
 FONT_FAMILY = "Helvetica"
 BG_COLOR = "#13005e"
+TABLE_COLOR = "#5C0500"
 BULLET = "\u2022"
 
-def make_slides(tables: List[Table], announcements: List[str], agenda: List[str], donows: List[str], exam_mode: bool) -> ET.Element:    
+def make_slides(tables: List[Table], announcements: List[str], agenda: List[str], donows: List[str], printable: bool) -> ET.Element:    
     # Create the root <svg> element with its attributes
     svg_attributes = {
         "width": str(WIDTH),
@@ -24,15 +25,15 @@ def make_slides(tables: List[Table], announcements: List[str], agenda: List[str]
     ET.SubElement(svg, 'rect', attrib={
         "width": "100%",
         "height": "100%",
-        "fill": BG_COLOR
+        "fill": BG_COLOR if not printable else "white"
     })
-    insert_tables(tables, svg, exam_mode)
-    insert_agenda(agenda, svg)
-    insert_announcements(announcements, svg)
-    insert_donows(donows, svg)
+    insert_tables(tables, svg, printable)
+    insert_agenda(agenda, svg, printable)
+    insert_announcements(announcements, svg, printable)
+    insert_donows(donows, svg, printable)
     return svg
 
-def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
+def insert_tables(tables: List[Table], svg: ET.Element, printable: bool):
     width = int(svg.attrib["width"])
     height = int(svg.attrib["height"])-100
     n_rows = ceil(sqrt(len(tables)))
@@ -40,6 +41,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
     dx = min(width,height) // n_cols
     if len(tables) > 36:
         raise ValueError("Slide code assumes fewer than 36 tables")
+    exam_mode = max([len(t) for t in tables]) == 1
     if exam_mode:
         front_text = ET.SubElement(svg, 'text',{
             "x": str(width//3),
@@ -58,7 +60,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
             "cx": str(offset_x),
             "cy": str(offset_y),
             "r": str(dx//2),
-            "fill": "#5C0500",
+            "fill": TABLE_COLOR if not printable else "white",
             "stroke": "black",
             "stroke-width": "4"
         })
@@ -69,7 +71,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
             "y": str(offset_y - 50),
             "font-family": FONT_FAMILY,
             "font-size": HEADER_SIZE,
-            "fill": "white",
+            "fill": "white" if not printable else "black",
             "text-anchor": "middle",
         })
         if not exam_mode:
@@ -82,7 +84,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, exam_mode: bool):
             })
             t1_student.text = student.name
 
-def insert_agenda(agenda_items: List[str], svg: ET.Element):
+def insert_agenda(agenda_items: List[str], svg: ET.Element, printable: bool):
     width = int(svg.attrib["width"])
     height = int(svg.attrib["height"])
     agenda_x = width-1.9*width//5
@@ -92,13 +94,13 @@ def insert_agenda(agenda_items: List[str], svg: ET.Element):
         "y": str(agenda_y),
         "font-family": FONT_FAMILY,
         "font-size": HEADER_SIZE,
-        "fill": "white",
+        "fill": "white" if not printable else "black",
         "text-anchor": "left",
     })
     agenda.text = "Agenda"
     insert_tspan_list(agenda, agenda_items)
 
-def insert_announcements(announcements: List[str], svg: ET.Element):
+def insert_announcements(announcements: List[str], svg: ET.Element, printable: bool):
     width = int(svg.attrib["width"])
     height = int(svg.attrib["height"])
     x = width-1.9*width//5
@@ -107,14 +109,14 @@ def insert_announcements(announcements: List[str], svg: ET.Element):
         "y": str(height//3 + 50),
         "font-family": FONT_FAMILY,
         "font-size": HEADER_SIZE,
-        "fill": "white",
+        "fill": "white" if not printable else "black",
         "text-anchor": "left",
     })
     ann_elem.text = "Announcements"
     insert_tspan_list(ann_elem, announcements)
 
 
-def insert_donows(items: List[str], svg: ET.Element):
+def insert_donows(items: List[str], svg: ET.Element, printable: bool):
     width = int(svg.attrib["width"])
     height = int(svg.attrib["height"])
     x = width-1.9*width//5
@@ -123,7 +125,7 @@ def insert_donows(items: List[str], svg: ET.Element):
         "y": str(2*height//3),
         "font-family": FONT_FAMILY,
         "font-size": HEADER_SIZE,
-        "fill": "white",
+        "fill": "white" if not printable else "black",
         "text-anchor": "left",
     })
     donow.text = "Do Now"

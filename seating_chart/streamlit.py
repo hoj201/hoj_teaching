@@ -60,19 +60,17 @@ except Exception as e:
     raise e
 
 
-exam_mode = st.toggle("exam_mode", value=False, help="Arranges students into individual desks")
-if exam_mode:
-    max_table_size=1
+printable = st.toggle("printable", value=False, help="Makes slides suitable for printing.")
 
 if st.button("Generate slides"):
     logger.info("Generating slides")
     logger.info(f"Selected periods: {selected_periods}") 
-    logger.info(f"Exam mode: {exam_mode}")
     logger.info(f"Content: {content_string}")
     if len([x for x in os.listdir('.') if x.endswith('.svg')]) >= 4:
         logger.info("removing old svg files")
         [os.remove(x) for x in os.listdir('.') if x.endswith('.svg')]
-    tables_by_period, slide_filenames = generate(selected_periods, content, exam_mode)
+    tables_by_period, slide_filenames = generate(selected_periods, content, printable)
+    st.header("Generated Slides")
     for fn in slide_filenames:
         st.image(fn)
     st.code(json.dumps(tables_by_period, indent=4), language='json')

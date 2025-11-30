@@ -95,7 +95,7 @@ def load_roster(period) -> List[Student]:
 
 
 
-def generate(periods: List[str], content: Content, exam_mode:bool):
+def generate(periods: List[str], content: Content, printable: bool):
     agenda = content.agenda
     announcements = content.announcements
     do_now = content.do_now
@@ -108,7 +108,7 @@ def generate(periods: List[str], content: Content, exam_mode:bool):
             announcements=announcements[period],
             agenda = agenda[period],
             donows = do_now[period],
-            exam_mode=exam_mode
+            printable=printable
         )
         xml_string = ET.tostring(svg, encoding='unicode')
 
