@@ -1,5 +1,0 @@
-# terraform.tfvars
-
-key_name       = "my-aws-key" # <-- Replace with your key pair name
-app_repo_url   = "https://github.com/hoj201/hoj_teaching.git"
-app_entrypoint = "streamlit.py"

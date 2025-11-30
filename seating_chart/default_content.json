@@ -18,11 +18,144 @@
             "Unit 2 test is Thursday"
         ]
     },
-    "seeds":{
-        "period_12": "Qstbwymzdf$va2?landyn67!21:)",
-        "period_45": "N67I41QgR212741strawberryElephant667TungTungTungSahur!!!!!",
-        "period_78": "3.4674125212225GABCAxelAdanLeoXavierAnothinoyAvelar@@@@Kaboom!",
-        "period_910": "abcdefg200500"
+    "tables":{
+        "period_12": [
+            [
+                "Leron",
+                "Kylie",
+                "Nash"
+            ],
+            [
+                "Nadia",
+                "Troy",
+                "Dominic H"
+            ],
+            [
+                "Jonathan",
+                "Madison",
+                "Noah"
+            ],
+            [
+                "Angela",
+                "Braedenn",
+                "Maverick"
+            ],
+            [
+                "Cameron",
+                "Gavin",
+                "Landyn"
+            ],
+            [
+                "Dominic B",
+                "Brandon",
+                "Juliett"
+            ],
+            [
+                "Valeria",
+                "Alina"
+            ],
+            [
+                "Elinor",
+                "Evelyn"
+            ]
+        ],
+        "period_45": [
+            [
+                "Ryan",
+                "Jocelyn",
+                "Kendall"
+            ],
+            [
+                "Joseph",
+                "Mila",
+                "Nathan"
+            ],
+            [
+                "Adam",
+                "Anna",
+                "Kat"
+            ],
+            [
+                "Addison",
+                "Madi",
+                "Sophia"
+            ],
+            [
+                "Riley",
+                "Travis",
+                "Leo"
+            ],
+            [
+                "Leilani",
+                "Kimberly",
+                "Javier"
+            ]
+        ],
+        "period_78": [
+            [
+                "Gabby",
+                "Romeo",
+                "Mia"
+            ],
+            [
+                "Maia",
+                "Marco",
+                "Rocco"
+            ],
+            [
+                "Vera",
+                "Jaiden",
+                "Lilli"
+            ],
+            [
+                "Susana",
+                "Daisy",
+                "April"
+            ],
+            [
+                "Sofia",
+                "Axel",
+                "Xavier"
+            ],
+            [
+                "Carlos",
+                "Rene",
+                "Adan",
+                "Leo"
+            ]
+        ],
+        "period_910": [
+            [
+                "Lexi",
+                "Aiden E",
+                "Nathalie"
+            ],
+            [
+                "Daniel",
+                "Ally",
+                "Kennedy"
+            ],
+            [
+                "Savanna",
+                "Koda",
+                "Nizeah"
+            ],
+            [
+                "Ayden G",
+                "Ari",
+                "Gina"
+            ],
+            [
+                "Sarai",
+                "Naiara",
+                "Zach"
+            ],
+            [
+                "Makayla",
+                "Ian",
+                "Harper",
+                "Lukas"
+            ]
+        ]
     }
-
 }

@@ -1,22 +1,21 @@
 import streamlit as st
-from hoj_slides import generate, Content
+from hoj_slides import generate, Content, PERIODS
 from pathlib import Path
 import json
 import logging
 import os
 
+logger = st.logger.get_logger(__name__)
+logger.setLevel(logging.INFO)
+logger.info('Streamlit app started')
+
 SCRIPT_DIR = Path(__file__).resolve().parent
-periods = [
-    "period_12",
-    "period_45",
-    "period_78",
-    "period_910"
-]
+
 
 st.title("Seating Chart Slide Generator")
 
 st.header("Which blocks")
-selected_periods = st.multiselect("Blocks", options=periods)
+selected_periods = st.multiselect("Blocks", options=PERIODS, default=PERIODS)
 
 
 st.header("Content")
@@ -31,19 +30,23 @@ content_string = st.text_area(
 try:
     content = json.loads(content_string)
 except json.decoder.JSONDecodeError as error:
+    logger.error("JSON decode error in content input")
     st.error(error)
+
+if "agenda" not in content or "do_now" not in content or "announcements" not in content:
+    st.error("Content must include 'agenda', 'do_now', and 'announcements' sections.")
+
+if "tables" not in content:
+    st.warning("No 'tables' section found in content; default tables will be used if seeds are provided.")
+    if "seeds" not in content:
+        st.error("No 'tables' or 'seeds' provided; cannot generate seating charts.")
 
 try:
     content = Content.from_dict(content)
 except Exception as e:
+    logger.error("Error creating Content from dict")
     st.error(e)
-
-st.header("Max Table Size")
-max_table_size = st.text_input("max_table_size", value="3", max_chars=2)
-try:
-    max_table_size = int(max_table_size)
-except ValueError as error:
-    st.error(error)
+    raise e
 
 
 exam_mode = st.toggle("exam_mode", value=False, help="Arranges students into individual desks")
@@ -51,10 +54,15 @@ if exam_mode:
     max_table_size=1
 
 if st.button("Generate slides"):
+    logger.info("Generating slides")
+    logger.info(f"Selected periods: {selected_periods}") 
+    logger.info(f"Exam mode: {exam_mode}")
+    logger.info(f"Content: {content_string}")
     if len([x for x in os.listdir('.') if x.endswith('.svg')]) >= 4:
-        logging.info("removing old svg files")
+        logger.info("removing old svg files")
         [os.remove(x) for x in os.listdir('.') if x.endswith('.svg')]
-    tables_by_period, slide_filenames = generate(selected_periods, content, max_table_size, exam_mode)
+    tables_by_period, slide_filenames = generate(selected_periods, content, exam_mode)
     for fn in slide_filenames:
         st.image(fn)
-    st.json(tables_by_period)
+    st.code(json.dumps(tables_by_period, indent=4), language='json')
+    logger.info("Slides generated successfully")
