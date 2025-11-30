@@ -14,6 +14,17 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 
 st.title("Seating Chart Slide Generator")
 
+st.write("If you do not specify seating tables, default seating will be used. To randomize seating, provide 'seeds' and 'max_table_size' in the content JSON.")
+st.json({
+    "seeds": {
+        "period_12": "labubu",
+        "period_45": "67",
+        "period_78": "41",
+        "period_910": "1234randomness"
+    },
+    "max_table_size": 5}
+)
+
 st.header("Which blocks")
 selected_periods = st.multiselect("Blocks", options=PERIODS, default=PERIODS)
 
@@ -39,7 +50,7 @@ if "agenda" not in content or "do_now" not in content or "announcements" not in 
 if "tables" not in content:
     st.warning("No 'tables' section found in content; default tables will be used if seeds are provided.")
     if "seeds" not in content:
-        st.error("No 'tables' or 'seeds' provided; cannot generate seating charts.")
+        st.warning("No 'tables' or 'seeds' provided; using default seating.")
 
 try:
     content = Content.from_dict(content)

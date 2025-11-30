@@ -30,6 +30,7 @@ class Content():
         agenda = cls.to_default_dict(d["agenda"])
         do_now = cls.to_default_dict(d["do_now"])
         announcements = cls.to_default_dict(d["announcements"])
+
         tables = cls.tables_from_json_dict(d.get("tables", dict()))
         if "seeds" in d:
             seeds = cls.to_default_dict(d["seeds"])
@@ -40,6 +41,9 @@ class Content():
                 seed = seeds[period]
                 mts = max_table_size[period]
                 tables[period] = cls.tables_from_rng_seed(period, seed, mts)
+        for period in PERIODS:
+            if period not in tables:
+                tables[period] = cls.default_tables(period)
         return cls(agenda, do_now, announcements, tables)
 
     @staticmethod
@@ -65,6 +69,12 @@ class Content():
         students = load_roster(period)
         tables = make_tables(students, max_table_size=max_table_size, seed=seed)
         return tables
+
+    @staticmethod
+    def default_tables(period: str) -> List[List[Student]]:
+        with open(f'{SCRIPT_DIR}/default_tables.json', mode ='r') as file:
+            tables_json = json.load(file)
+        return Content.tables_from_json_dict(tables_json)[period]
 
 
 def load_roster(period) -> List[Student]:
