@@ -20,5 +20,6 @@
     },
     "comments": [
         "For random seating, add a 'seeds' section with RNG seeds for each period and a max_table_size section."
-    ]
+    ],
+    "max_table_size": 3
 }
