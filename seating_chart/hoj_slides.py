@@ -34,13 +34,12 @@ class Content():
         tables = cls.tables_from_json_dict(d.get("tables", dict()))
         if "seeds" in d:
             seeds = cls.to_default_dict(d["seeds"])
-            max_table_size = cls.to_default_dict(d["max_table_size"])
+            max_table_size = d.get("max_table_size", 3)
             for period in PERIODS:
-                if period in tables:
+                if period in tables or (period not in seeds and "default" not in seeds):
                     continue
                 seed = seeds[period]
-                mts = max_table_size[period]
-                tables[period] = cls.tables_from_rng_seed(period, seed, mts)
+                tables[period] = cls.tables_from_rng_seed(period, seed, max_table_size=max_table_size)
         for period in PERIODS:
             if period not in tables:
                 tables[period] = cls.default_tables(period, max_table_size=d.get("max_table_size", 3))
