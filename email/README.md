@@ -44,3 +44,12 @@ Desired Features:
 
  ## Notes
  The file `students.json` is generated from `process_email_files.py`.  However, there are a few errors (check Alina's record + records for students with the same last name + for null genders)
+
+ ## TODO
+ - [x] remove fixtures
+ - [x] encrypt sqlite db file (encrypt whole file using crytopgraphy package)
+ - [x] post contacts.db on s3
+ - [x] download contacts.db everytime
+ - [x] create machine account
+ - [x] query students first (fetchone), then query guardians
+ - [x] add copy-paste box for greetings + emails
