@@ -1,5 +1,5 @@
 import streamlit as st
-from crypt import get_database, upload_database
+from crypt import get_database, upload_database, remove_local_database
 import sqlite3
 import boto3
 
@@ -16,6 +16,7 @@ s3 = boto3.client(
 st.session_state.dbkey = st.text_input("Enter the encryption key:", type="password").encode("utf-8")
 if "dbkey" in st.session_state and st.session_state.dbkey == st.secrets["DB_KEY"].encode("utf-8"):
     get_database(st.session_state.dbkey, s3_client=s3)
+    st.info("Database downloaded and decrypted.")
 else:
     st.warning("Please enter the encryption key to access the database.")
     st.stop()
@@ -77,8 +78,9 @@ with st.form("add_student_form"):
             INSERT INTO students (firstname, lastname, nickname, pronouns, course, email)
             VALUES (?, ?, ?, ?, ?, ?)
         ''', (firstname, lastname, nickname, pronouns, course, email))
+        student_id = cursor.lastrowid
         connection.commit()
-        st.success(f"Added student {firstname} {lastname}.")
+        st.success(f"Added student {firstname} {lastname}. id: {student_id}")
 
         upload_database("contacts.db", st.session_state.dbkey, s3_client=s3)
         st.info("Database uploaded and encrypted.")
@@ -121,3 +123,8 @@ with st.form("delete_student_form"):
 
         upload_database("contacts.db", st.session_state.dbkey, s3_client=s3)
         st.info("Database uploaded and encrypted.")
+
+st.title("Clear Local Database Files")
+if st.button("Clear Local Database Files"):
+    remove_local_database()
+    st.info("Local database files cleared.")

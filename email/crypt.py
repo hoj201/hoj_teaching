@@ -1,4 +1,5 @@
 from cryptography.fernet import Fernet
+import os
 
 def encrypt_file(filename, key, output_filename=None):
     f = Fernet(key)
@@ -30,6 +31,7 @@ def get_database(key: str, s3_client=None):
     output_filename = "contacts.db"
     s3_client.download_file(bucket_name, object_name, object_name)
     decrypt_file(object_name, key, output_filename)
+    os.remove(object_name)
     return output_filename
 
 def upload_database(filename: str, key: str, s3_client=None):
@@ -38,3 +40,9 @@ def upload_database(filename: str, key: str, s3_client=None):
     encrypted_filename = "contacts_encrypted.db"
     encrypt_file(filename, key, encrypted_filename)
     s3_client.upload_file(encrypted_filename, bucket_name, object_name)
+
+def remove_local_database():
+    if os.path.exists("contacts.db"):
+        os.remove("contacts.db")
+    if os.path.exists("contacts_encrypted.db"):
+        os.remove("contacts_encrypted.db")
