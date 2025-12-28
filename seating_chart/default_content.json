@@ -1,0 +1,25 @@
+{
+    "agenda":{
+        "default":[
+            "Aleks",
+            "Unit 3 Lesson 1"
+        ]
+    },
+    "do_now":{
+        "default":[
+            "Grab your workbook and a pencil",
+            "Take your seat",
+            "Take out your chromebook",
+            "Start Aleks"
+        ]
+    },
+    "announcements":{
+        "default":[
+            "Unit 2 test is Thursday"
+        ]
+    },
+    "comments": [
+        "For random seating, add a 'seeds' section with RNG seeds for each period and a max_table_size section."
+    ],
+    "max_table_size": 3
+}

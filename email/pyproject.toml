@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "email"
+version = "0.1.0"
+description = "for sending student emails"
+authors = ["hoj201 <hoj201@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.13"
+streamlit = "^1.51.0"
+cryptography = "^46.0.3"
+boto3 = "^1.42.16"
+dotenv = "^0.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

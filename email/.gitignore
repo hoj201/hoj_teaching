@@ -1,0 +1,6 @@
+secret.key
+students.json
+contacts.db
+contacts_encrypted.db
+.streamlit
+__pycache__
