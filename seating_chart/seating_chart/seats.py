@@ -1,18 +1,43 @@
 import random
-from typing import List, Set, Optional
-
+from typing import Dict, List, Set, Optional
+from enum import Enum
 
 """Code here takes in a list of student seating preferences and randomly
 guesses table groupings until one works"""
 
+class Level(Enum):
+    HIGH = 1
+    MEDIUM_HIGH = 2
+    MEDIUM_LOW = 3
+    LOW = 4
+
+enum_translation = {
+    "H": Level.HIGH,
+    "MH": Level.MEDIUM_HIGH,
+    "ML": Level.MEDIUM_LOW,
+    "L": Level.LOW
+}
+
 class Student(object):
-    def __init__(self, name: str, preferential_seating = False, avoids: Optional[str] = None):
+    def __init__(self, name: str, preferential_seating = False, level: Level = Level.HIGH):
         self.name = name
-        self.avoids = avoids
         self.preferential_seating = preferential_seating
+        self.level = level
+        self.avoids: List[str] = []
 
     def __repr__(self):
         return f"Student({self.name})"
+    
+    @staticmethod
+    def from_json_dict(d: Dict):
+        name = d["name"]
+        preferential_seating = d.get("preferential_seating", False)
+        level_str = d.get("level", "H")
+        level = enum_translation.get(level_str, Level.HIGH)
+        avoids = d.get("avoids", [])
+        student = Student(name, preferential_seating=preferential_seating, level=level)
+        student.avoids = avoids
+        return student
 
 Table = Set[Student]
 
@@ -75,3 +100,39 @@ def make_tables(roster: List[Student], max_table_size: int, seed: Optional[str]=
     if any([bad_table(t) for t in tables]):
         return make_tables(roster=roster, max_table_size=max_table_size, seed=seed + "67")
     return tables
+
+def number_of_kagan_tables(n):
+    remainder = n % 4
+    if remainder < 2:
+        return n // 4
+    else:
+        return n // 4 + 1
+
+def make_kagan_tables(roster: List[Student], seed: Optional[str]=None) -> List[Table]:
+    if seed:
+        random.seed(seed)
+    unassigned_students = roster[:] # copy so original isn't modified
+
+    # sort students by level
+    high_level_students = [s for s in unassigned_students if s.level == Level.HIGH]
+    medium_high_level_students = [s for s in unassigned_students if s.level == Level.MEDIUM_HIGH]
+    medium_low_level_students = [s for s in unassigned_students if s.level == Level.MEDIUM_LOW]
+    low_level_students = [s for s in unassigned_students if s.level == Level.LOW]
+    random.shuffle(high_level_students)
+    random.shuffle(medium_high_level_students)
+    random.shuffle(medium_low_level_students)
+    random.shuffle(low_level_students)
+    n_tables = number_of_kagan_tables(len(roster))
+    # distribute levels equally into tables
+    tables = [set() for _ in range(n_tables)]
+    for i, student in enumerate(high_level_students):
+        tables[i % n_tables].add(student)
+    for i, student in enumerate(medium_high_level_students):
+        tables[i % n_tables].add(student)
+    for i, student in enumerate(medium_low_level_students):
+        tables[i % n_tables].add(student)
+    for i, student in enumerate(low_level_students):
+        tables[i % n_tables].add(student)
+    if any([bad_table(t) for t in tables]):
+        return make_kagan_tables(roster=roster, seed=seed + "89")
+    return sorted(tables, key= lambda t: sum([1 for s in t if s.preferential_seating]), reverse=True)

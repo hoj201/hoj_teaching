@@ -34,32 +34,35 @@ def make_slides(tables: List[Table], announcements: List[str], agenda: List[str]
     return svg
 
 def insert_tables(tables: List[Table], svg: ET.Element, printable: bool):
-    width = int(svg.attrib["width"])
+    width = int(svg.attrib["width"]) * 0.66 # leave space for agenda/announcements/do now
     height = int(svg.attrib["height"])-100
-    n_rows = ceil(sqrt(len(tables)))
-    n_cols = n_rows # we will assume a square arrangement
-    dx = min(width,height) // n_cols
+    n_cols = 3
+    n_rows = ceil(len(tables) / n_cols)
+    if n_rows > 3:
+        n_rows = ceil(sqrt(len(tables)))
+        n_cols = n_rows
+    dx = min(width // n_cols, height // n_rows)
     if len(tables) > 36:
         raise ValueError("Slide code assumes fewer than 36 tables")
     exam_mode = max([len(t) for t in tables]) == 1
-    if exam_mode:
-        front_text = ET.SubElement(svg, 'text',{
-            "x": str(width//3),
-            "y": "100",
-            "font-family": FONT_FAMILY,
-            "font-size": HEADER_SIZE,
-            "fill": "white",
-            "text-anchor": "middle",
-        })
-        front_text.text = "FRONT"
+    front_text = ET.SubElement(svg, 'text',{
+        "x": str(width//3),
+        "y": "100",
+        "font-family": FONT_FAMILY,
+        "font-size": HEADER_SIZE,
+        "fill": "white",
+        "text-anchor": "middle",
+    })
+    front_text.text = f"FRONT"
     for index, table in enumerate(tables):
-        offset_x = (index % n_rows) * dx + dx//2
-        offset_y = (index // n_cols) * dx + dx//2 + 100 # add 100 to fit text at the top
+        offset_x = (index % n_cols) * dx + dx//2
+        offset_y = (index // n_cols) * dx + dx//2 + 100
         # Create the <circle> element as a sub-element of <svg>
+        radius = dx//2
         circle = ET.SubElement(svg, 'circle', {
             "cx": str(offset_x),
             "cy": str(offset_y),
-            "r": str(dx//2),
+            "r": str(radius),
             "fill": TABLE_COLOR if not printable else "white",
             "stroke": "black",
             "stroke-width": "4"
@@ -68,7 +71,7 @@ def insert_tables(tables: List[Table], svg: ET.Element, printable: bool):
         # Create the <text> element and add it to <svg>
         t1 = ET.SubElement(svg, 'text', {
             "x": str(offset_x),
-            "y": str(offset_y - 50),
+            "y": str(offset_y-radius/2),
             "font-family": FONT_FAMILY,
             "font-size": HEADER_SIZE,
             "fill": "white" if not printable else "black",
