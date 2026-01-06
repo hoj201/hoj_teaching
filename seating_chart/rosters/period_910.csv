@@ -1,21 +1,21 @@
-first_name,preferential_seating,avoids
-Sarai,,
-Naiara,,
-Kennedy,,
-Koda,,
-Harper,,
-Nizeah,,
-Ian,,
-Ari,,
-Nathalie,,
-Gina,,
-Daniel,,
-Lexi,,Gina
-Aiden E,,
-Ayden G,,
-Zak,,
-Ally,,
-Savannah,,
-Makayla,,
-Lukas,,
-Joey,,
+first_name,preferential_seating,avoids,level
+Lexi,,Gina:Kennedy,H
+Sarai,,,L
+Naiara,,,ML
+Kennedy,,,ML
+Koda,,,H
+Harper,,,H
+Nizeah,,,L
+Ian,,,L
+Ari,,,H
+Nathalie,,,MH
+Gina,,,L
+Daniel,,,ML
+Aiden E,,,ML
+Ayden G,,,MH
+Zach,,,MH
+Ally,,,MH
+Savannah,,,MH
+Makayla,,,H
+Lukas,,,ML
+Joey,,,L

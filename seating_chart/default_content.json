@@ -18,8 +18,12 @@
             "Unit 2 test is Thursday"
         ]
     },
-    "comments": [
-        "For random seating, add a 'seeds' section with RNG seeds for each period and a max_table_size section."
-    ],
-    "max_table_size": 3
+    "seeds": {
+        "period_12": "labubu",
+        "period_45": "67",
+        "period_78": "41",
+        "period_910": "1234randomness"
+    },
+    "max_table_size": 4,
+    "kagan": true
 }

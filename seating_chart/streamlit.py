@@ -52,6 +52,7 @@ if "tables" not in content:
     if "seeds" not in content:
         st.warning("No 'tables' or 'seeds' provided; using default seating.")
 
+
 try:
     content = Content.from_dict(content)
 except Exception as e:

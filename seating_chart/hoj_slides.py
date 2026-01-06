@@ -1,5 +1,5 @@
 from seating_chart.slide import make_slides, ET
-from seating_chart.seats import make_tables, Student
+from seating_chart.seats import make_kagan_tables, make_tables, Student
 import csv, json
 from typing import Dict, List
 from collections import defaultdict
@@ -30,6 +30,7 @@ class Content():
         agenda = cls.to_default_dict(d["agenda"])
         do_now = cls.to_default_dict(d["do_now"])
         announcements = cls.to_default_dict(d["announcements"])
+        kagan = d.get("kagan", True)
 
         tables = cls.tables_from_json_dict(d.get("tables", dict()))
         if "seeds" in d:
@@ -39,7 +40,7 @@ class Content():
                 if period in tables or (period not in seeds and "default" not in seeds):
                     continue
                 seed = seeds[period]
-                tables[period] = cls.tables_from_rng_seed(period, seed, max_table_size=max_table_size)
+                tables[period] = cls.tables_from_rng_seed(period, seed, max_table_size=max_table_size, kagan=kagan)
         for period in PERIODS:
             if period not in tables:
                 tables[period] = cls.default_tables(period, max_table_size=d.get("max_table_size", 3))
@@ -64,10 +65,11 @@ class Content():
         return tables_by_period          
 
     @staticmethod    
-    def tables_from_rng_seed(period: str, seed: int, max_table_size) -> List[List[Student]]:
+    def tables_from_rng_seed(period: str, seed: int, max_table_size: int = 4, kagan: bool = True) -> List[List[Student]]:
         students = load_roster(period)
-        tables = make_tables(students, max_table_size=max_table_size, seed=seed)
-        return tables
+        if kagan:
+            return make_kagan_tables(students, seed=seed)
+        return make_tables(students, max_table_size=max_table_size, seed=seed)
 
     @staticmethod
     def default_tables(period: str, max_table_size: int = 3) -> List[List[Student]]:
@@ -90,13 +92,13 @@ def load_roster(period) -> List[Student]:
         csvFile = csv.DictReader(file)
         for row in csvFile:
                 pref_seating = row["preferential_seating"].strip().lower()=='yes'
-                students.append(
-                    Student(
-                        name=row["first_name"],
-                        preferential_seating=pref_seating,
-                        avoids=row["avoids"]
-                    )
-                )
+                student_dict = {
+                    "name": row["first_name"],
+                    "preferential_seating": pref_seating,
+                    "avoids": row["avoids"].split(":"),
+                    "level": row["level"]
+                }
+                students.append(Student.from_json_dict(student_dict))
     return students
 
 
@@ -108,7 +110,6 @@ def generate(periods: List[str], content: Content, printable: bool):
     do_now = content.do_now
     tables = content.tables
     slide_filenames = []
-    tables_by_period = dict()
     for period in periods:
         svg = make_slides(
             tables[period], 
