@@ -43,6 +43,7 @@ class Content():
                 tables[period] = cls.tables_from_rng_seed(period, seed, max_table_size=max_table_size, kagan=kagan)
         for period in PERIODS:
             if period not in tables:
+                logger.info(f"No tables or seed provided for {period}, loading default tables")
                 tables[period] = cls.default_tables(period, max_table_size=d.get("max_table_size", 3))
         return cls(agenda, do_now, announcements, tables)
 
@@ -74,7 +75,9 @@ class Content():
     @staticmethod
     def default_tables(period: str, max_table_size: int = 3) -> List[List[Student]]:
         print(f"Loading default tables for {period} with max_table_size={max_table_size}")
-        if max_table_size == 3:
+        if max_table_size == 4:
+            file_name = f'{SCRIPT_DIR}/default_tables_size4.json'
+        elif max_table_size == 3:
             file_name = f'{SCRIPT_DIR}/default_tables.json'
         elif max_table_size == 2:
             file_name = f'{SCRIPT_DIR}/default_tables_size2.json'
