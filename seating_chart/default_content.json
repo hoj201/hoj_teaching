@@ -24,6 +24,11 @@
         "period_78": "41",
         "period_910": "1234randomness"
     },
-    "max_table_size": 4,
+    "max_table_size": {
+        "period_12": 4,
+        "period_45": 4,
+        "period_78": 4,
+        "period_910": 1
+    },
     "kagan": true
 }

@@ -5,8 +5,8 @@ import json
 import logging
 import os
 
-logger = st.logger.get_logger(__name__)
-logger.setLevel(logging.INFO)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 logger.info('Streamlit app started')
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -48,9 +48,10 @@ if "agenda" not in content or "do_now" not in content or "announcements" not in 
     st.error("Content must include 'agenda', 'do_now', and 'announcements' sections.")
 
 if "tables" not in content:
-    st.warning("No 'tables' section found in content; default tables will be used if seeds are provided.")
     if "seeds" not in content:
         st.warning("No 'tables' or 'seeds' provided; using default seating.")
+    else:
+        st.info("Using provided seeds to randomize seating.")
 
 
 try:
