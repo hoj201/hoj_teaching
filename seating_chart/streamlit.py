@@ -75,5 +75,7 @@ if st.button("Generate slides"):
     st.header("Generated Slides")
     for fn in slide_filenames:
         st.image(fn)
+        with open(fn, "r") as f:
+            st.download_button(label=f"Download {fn}", data=f, file_name=fn, mime="image/svg+xml")
     st.code(json.dumps(tables_by_period, indent=4), language='json')
     logger.info("Slides generated successfully")
